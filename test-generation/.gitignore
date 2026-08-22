@@ -1,0 +1,6 @@
+*.DS_Store
+preprocessed_data/
+model_output/
+TDD_Bench.json
+temp_*.json
+*__pycache__/

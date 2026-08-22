@@ -1,0 +1,10 @@
+{
+  "openai/aws/claude-sonnet-4-5": {
+    "max_tokens": 64000,
+    "max_input_tokens": 200000,
+    "input_cost_per_token": 0.00000228,
+    "output_cost_per_token": 0.0000114,
+    "litellm_provider": "openai",
+    "mode": "chat"
+  }
+}

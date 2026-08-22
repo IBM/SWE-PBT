@@ -1,78 +1,186 @@
-<!-- This should be the location of the title of the repository, normally the short name -->
-# repo-template
+# SWE-PBT
 
-<!-- Build Status, is a great thing to have at the top of your repository, it shows that you take your CI/CD as first class citizens -->
-<!-- [![Build Status](https://travis-ci.org/jjasghar/ibm-cloud-cli.svg?branch=master)](https://travis-ci.org/jjasghar/ibm-cloud-cli) -->
+SWE-PBT is a pipeline for generating property-based tests (PBTs) to help resolve real-world software engineering issues. Given a GitHub issue from the [SWE-bench](https://swebench.com) benchmark, the pipeline generates tests that capture the intended behaviour described in the issue, uses those tests to guide an automated software engineering agent toward a fix, and then evaluates the resulting patch against the SWE-bench harness.
 
-<!-- Not always needed, but a scope helps the user understand in a short sentance like below, why this repo exists -->
-## Scope
+## Project Tree
 
-The purpose of this project is to provide a template for new open source repositories.
-
-<!-- A more detailed Usage or detailed explaination of the repository here -->
-## Usage
-
-This repository contains some example best practices for open source repositories:
-
-* [LICENSE](LICENSE)
-* [README.md](README.md)
-* [CONTRIBUTING.md](CONTRIBUTING.md)
-* [MAINTAINERS.md](MAINTAINERS.md)
-* [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-<!-- A Changelog allows you to track major changes and things that happen, https://github.com/github-changelog-generator/github-changelog-generator can help automate the process -->
-* [CHANGELOG.md](CHANGELOG.md)
-
-> These are optional
-
-<!-- The following are OPTIONAL, but strongly suggested to have in your repository. -->
-* [dco.yml](.github/dco.yml) - This enables DCO bot for you, please take a look https://github.com/probot/dco for more details.
-* [travis.yml](.travis.yml) - This is a example `.travis.yml`, please take a look https://docs.travis-ci.com/user/tutorial/ for more details.
-
-These may be copied into a new or existing project to make it easier for developers not on a project team to collaborate.
-
-<!-- A notes section is useful for anything that isn't covered in the Usage or Scope. Like what we have below. -->
-## Notes
-
-**NOTE: While this boilerplate project uses the Apache 2.0 license, when
-establishing a new repo using this template, please use the
-license that was approved for your project.**
-
-**NOTE: This repository has been configured with the [DCO bot](https://github.com/probot/dco).
-When you set up a new repository that uses the Apache license, you should
-use the DCO to manage contributions. The DCO bot will help enforce that.
-Please contact one of the IBM GH Org stewards.**
-
-<!-- Questions can be useful but optional, this gives you a place to say, "This is how to contact this project maintainers or create PRs -->
-If you have any questions or issues you can create a new [issue here][issues].
-
-Pull requests are very welcome! Make sure your patches are well tested.
-Ideally create a topic branch for every separate change you make. For
-example:
-
-1. Fork the repo
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
-## License
-
-All source files must include a Copyright and License header. The SPDX license header is 
-preferred because it can be easily scanned.
-
-If you would like to see the detailed LICENSE click [here](LICENSE).
-
-```text
-#
-# Copyright IBM Corp. {Year project was created} - {Current Year}
-# SPDX-License-Identifier: Apache-2.0
-#
 ```
-## Authors
+SWE-PBT/
+├── test-generation/          # Potter & ePotter — PBT generation and execution feedback
+├── TDD-Bench-Verified/       # Evaluation harness for measuring test fail-to-pass rates
+├── Rebench-execution-harness/ # Execution harness for running tests on the ReBench subset
+├── mini-swe-agent/           # Lightweight SWE agent used to apply patches guided by PBTs
+└── SWE-bench/                # SWE-bench evaluation framework for scoring final patches
+```
 
-Optionally, you may include a list of authors, though this is redundant with the built-in
-GitHub list of contributors.
+### Directory responsibilities
 
-- Author: New OpenSource IBMer <new-opensource-ibmer@ibm.com>
+| Directory | Responsibility |
+|---|---|
+| `test-generation` | Contains **potter** (LLM-based PBT generator) and **epotter** (execution-feedback refinement loop). Batch scripts drive parallel generation across many instances; analysis scripts summarise pass/fail results. |
+| `TDD-Bench-Verified` | Evaluation harness that measures how many generated tests transition from failing (pre-patch) to passing (post-patch), providing the primary quality signal for generated tests. |
+| `Rebench-execution-harness` | Execution harness specialised for the ReBench dataset subset, used when running potter/epotter in `--is_rebench` mode. |
+| `mini-swe-agent` | A minimal AI software engineering agent that takes an issue and (optionally) a set of PBTs, then iteratively produces a patch. Supports `potter` mode to exploit the generated tests as a guidance signal. |
+| `SWE-bench` | The official SWE-bench evaluation framework. Runs the generated patches inside Docker containers and reports resolve rates against the benchmark dataset. |
 
-[issues]: https://github.com/IBM/repo-template/issues/new
+---
+
+## Requirements
+
+### Conda environment
+
+Create and activate a conda environment, then install the required Python packages:
+
+```bash
+conda create --name potter python=3.12
+conda activate potter
+conda install pip -y
+python -m pip install datasets
+python -m pip install litellm
+python -m pip install gitpython
+python -m pip install tree-sitter tree-sitter-python
+```
+
+### LLM API key
+
+The pipeline is configured for **Claude Sonnet** by default. Export your API key before running:
+
+```bash
+export CLAUDE_API="your_api_key_here"
+```
+
+To use a different model or LLM provider, see [`test-generation/utility.py`](test-generation/utility.py).
+
+### Per-directory setup
+
+Within the same `potter` conda environment, install each sub-project's requirements:
+
+```bash
+# Prepare the dataset for test-generation
+cd test-generation
+python dataset_preparation.py
+
+# Install the execution harness (epotter dependency)
+cp TDD_Bench.json Test_execution/
+cd Test_execution
+pip install -e .
+cd ../..
+
+# Install TDD-Bench-Verified
+cd TDD-Bench-Verified
+pip install -e .
+cd ..
+
+# Install mini-swe-agent
+cd mini-swe-agent
+pip install -e .
+cd ..
+
+# Install SWE-bench
+cd SWE-bench
+pip install -e .
+cd ..
+```
+
+> **Note:** SWE-bench evaluation requires Docker. Follow the [Docker setup guide](https://docs.docker.com/engine/install/) and, on Linux, the [post-installation steps](https://docs.docker.com/engine/install/linux-postinstall/). We recommend an `x86_64` machine with at least 120 GB of free storage, 16 GB of RAM, and 8 CPU cores.
+
+---
+
+## Running the Pipeline
+
+### Step 1 — Generate PBTs with potter
+
+Run potter in batch mode across a set of instance IDs. The instance IDs are supplied as a JSON array in a file (e.g., `id_list.json`).
+
+```bash
+cd test-generation
+bash potter_batch.sh [--is_rebench] [--workers N] [--api-keys key1,key2,...] <json_file>
+```
+
+**Example:**
+```bash
+bash potter_batch.sh --workers 4 id_list.json
+```
+
+Output is merged into `test-generation/potter_test.json`.
+
+---
+
+### Step 2 — Refine tests with epotter
+
+Run epotter to iteratively improve the generated tests using execution feedback. Requires the `potter_test.json` produced in Step 1.
+
+```bash
+cd test-generation
+bash epotter_batch.sh [--is_rebench] [--workers N] [--api-keys key1,key2,...] <path_to_initial_test_json>
+```
+
+**Example:**
+```bash
+bash epotter_batch.sh --workers 4 potter_test.json
+```
+
+Output is merged into `test-generation/e_otter_test.json`.
+
+---
+
+### Step 3 — Analyze test results
+
+Analyze the generated test outputs and produce a CSV report with pass/fail/coverage statistics.
+
+```bash
+cd test-generation
+python potter_results_analyze.py
+```
+
+---
+
+### Step 4 — Run the SWE agent with potter mode
+
+Use mini-swe-agent in `potter` mode to attempt patches on each instance, guided by the generated PBTs.
+
+```bash
+cd mini-swe-agent
+bash run.sh \
+    --mode potter \
+    --subset verified \
+    --instances <path_to_instance_ids.json> \
+    --tests <path_to_tests.json>
+```
+
+**Example:**
+```bash
+bash run.sh \
+    --mode potter \
+    --subset verified \
+    --instances ../test-generation/id_list.json \
+    --tests ../test-generation/e_otter_test.json
+```
+
+The script distributes work across 4 parallel tmux windows. Attach with `tmux attach -t run_potter_<pid>`.
+
+---
+
+### Step 5 — Evaluate with SWE-bench
+
+Evaluate the patches produced by mini-swe-agent against the SWE-bench benchmark using the official Docker-based harness.
+
+```bash
+cd SWE-bench
+python -m swebench.harness.run_evaluation \
+    --dataset_name princeton-nlp/SWE-bench_Lite \
+    --predictions_path <path_to_predictions> \
+    --max_workers <num_workers> \
+    --run_id <run_id>
+```
+
+**Example:**
+```bash
+python -m swebench.harness.run_evaluation \
+    --dataset_name princeton-nlp/SWE-bench_Lite \
+    --predictions_path ../mini-swe-agent/output \
+    --max_workers 4 \
+    --run_id potter_eval_run
+```
+
+Evaluation logs are written to `logs/` and final results to `evaluation_results/`.
