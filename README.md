@@ -181,8 +181,8 @@ bash run.sh \
     --mode merged \
     --subset verified \
     --instances ../test-generation/id_list.json \
-    --eotter-tests ../test-generation/gold.eotter_run0.json \
-    --potter-tests ../test-generation/e_otter_test.json
+    --eotter-tests eotter_tests.json \
+    --potter-tests potter_tests.json
 ```
 
 The script distributes work across 4 parallel tmux windows. Attach with `tmux attach -t run_merged_<pid>`.
