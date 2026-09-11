@@ -1,10 +1,12 @@
 #!/bin/bash
-# Usage: ./run.sh --mode <vanilla|eotter|potter> --subset <verified|rebench|/path/to/dataset.json> --instances <path_to_instance_ids.json> [--tests <path_to_tests.json>]
+# Usage: ./run.sh --mode <vanilla|eotter|potter|merged> --subset <verified|rebench|/path/to/dataset.json> --instances <path_to_instance_ids.json> [--tests <path_to_tests.json>] [--eotter-tests <path> --potter-tests <path>]
 #
-# --instances  JSON file containing a list of instance_id strings
-# --mode       One of: vanilla, eotter, potter
-# --subset     Dataset subset: verified, rebench, or a path to a local .json dataset file
-# --tests      Path to tests JSON file ({instance_id, model_patch} list); required for eotter/potter
+# --instances     JSON file containing a list of instance_id strings
+# --mode          One of: vanilla, eotter, potter, merged
+# --subset        Dataset subset: verified, rebench, or a path to a local .json dataset file
+# --tests         Path to tests JSON file ({instance_id, model_patch} list); required for eotter/potter
+# --eotter-tests  Path to eotter tests JSON file; required for merged
+# --potter-tests  Path to potter tests JSON file; required for merged
 #
 # Splits instance_ids across 4 parallel tmux windows.
 
@@ -14,26 +16,30 @@ set -euo pipefail
 mode=""
 instances_path=""
 tests_path=""
+eotter_tests_path=""
+potter_tests_path=""
 subset=""
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
-        --mode)      mode="$2";           shift 2 ;;
-        --instances) instances_path="$2"; shift 2 ;;
-        --tests)     tests_path="$2";     shift 2 ;;
-        --subset)    subset="$2";         shift 2 ;;
+        --mode)          mode="$2";               shift 2 ;;
+        --instances)     instances_path="$2";      shift 2 ;;
+        --tests)         tests_path="$2";          shift 2 ;;
+        --eotter-tests)  eotter_tests_path="$2";   shift 2 ;;
+        --potter-tests)  potter_tests_path="$2";   shift 2 ;;
+        --subset)        subset="$2";              shift 2 ;;
         *) echo "Unknown argument: $1"; exit 1 ;;
     esac
 done
 
 # ---------- validation ----------
 if [[ -z "$mode" || -z "$subset" || -z "$instances_path" ]]; then
-    echo "Usage: $0 --mode <vanilla|eotter|potter> --subset <verified|rebench|/path/to/dataset.json> --instances <path> [--tests <path>]"
+    echo "Usage: $0 --mode <vanilla|eotter|potter|merged> --subset <verified|rebench|/path/to/dataset.json> --instances <path> [--tests <path>] [--eotter-tests <path> --potter-tests <path>]"
     exit 1
 fi
 
-if [[ "$mode" != "vanilla" && "$mode" != "eotter" && "$mode" != "potter" ]]; then
-    echo "Error: --mode must be one of: vanilla, eotter, potter"
+if [[ "$mode" != "vanilla" && "$mode" != "eotter" && "$mode" != "potter" && "$mode" != "merged" ]]; then
+    echo "Error: --mode must be one of: vanilla, eotter, potter, merged"
     exit 1
 fi
 
@@ -47,6 +53,11 @@ if [[ ("$mode" == "eotter" || "$mode" == "potter") && -z "$tests_path" ]]; then
     exit 1
 fi
 
+if [[ "$mode" == "merged" && ( -z "$eotter_tests_path" || -z "$potter_tests_path" ) ]]; then
+    echo "Error: --eotter-tests and --potter-tests are both required when --mode is 'merged'"
+    exit 1
+fi
+
 if [[ ! -f "$instances_path" ]]; then
     echo "Error: instances file not found: $instances_path"
     exit 1
@@ -57,11 +68,29 @@ if [[ -n "$tests_path" && ! -f "$tests_path" ]]; then
     exit 1
 fi
 
+if [[ -n "$eotter_tests_path" && ! -f "$eotter_tests_path" ]]; then
+    echo "Error: eotter tests file not found: $eotter_tests_path"
+    exit 1
+fi
+
+if [[ -n "$potter_tests_path" && ! -f "$potter_tests_path" ]]; then
+    echo "Error: potter tests file not found: $potter_tests_path"
+    exit 1
+fi
+
 # Resolve absolute paths so tmux windows can find them regardless of cwd
 instances_abs="$(realpath "$instances_path")"
 tests_abs=""
 if [[ -n "$tests_path" ]]; then
     tests_abs="$(realpath "$tests_path")"
+fi
+eotter_tests_abs=""
+if [[ -n "$eotter_tests_path" ]]; then
+    eotter_tests_abs="$(realpath "$eotter_tests_path")"
+fi
+potter_tests_abs=""
+if [[ -n "$potter_tests_path" ]]; then
+    potter_tests_abs="$(realpath "$potter_tests_path")"
 fi
 # Resolve subset path too if it's a local file
 if [[ -f "$subset" ]]; then
@@ -107,10 +136,12 @@ for (( worker=0; worker<NUM_WORKERS; worker++ )); do
         continue
     fi
 
-    # Build the --tests flag string (empty for vanilla)
+    # Build the tests flag string (empty for vanilla)
     tests_flag=""
     if [[ -n "$tests_abs" ]]; then
         tests_flag="--tests $(printf '%q' "$tests_abs")"
+    elif [[ -n "$eotter_tests_abs" && -n "$potter_tests_abs" ]]; then
+        tests_flag="--eotter-tests $(printf '%q' "$eotter_tests_abs") --potter-tests $(printf '%q' "$potter_tests_abs")"
     fi
 
     # Write a temp script for this worker — avoids all quoting issues in tmux send-keys

@@ -68,6 +68,23 @@ agent:
     - After applying your fix, re-run the test to confirm it passes.
     - If the test seems incorrect or incomplete, ignore it and focus on fixing the issue described in the PR description.
 
+    ## Pre-written PBT Test
+
+    - A property-based test has already been placed at /testbed/pbt/test.py.
+    - The property-based test contains two branches a regression test branch and a reproduction test branch.
+    - The desired behavior of the regression branch is that it will pass on both the buggy and fixed versions of the repository.
+    - The desired behavior of the reproduction branch is that it will fail on the buggy version and pass on the fixed version of the repository.
+    - At first, you MUST run both branches of the property-based test to see the current state.
+    - The command to run the property-based test is given below:
+
+    ```bash
+    cd /testbed/pbt && IS_REGRESSION=<True/False> pytest --hypothesis-log-all test.py -vs
+    ```
+    - At first, run this command with `IS_REGRESSION=True` to run the regression branch. Print the test output.
+    - Then, run this command with `IS_REGRESSION=False` to run the reproduction branch. Print the test output.
+    - When generating the fix patches for this issue, you can run either the regression or the reproduction branch of this property-based test.
+    - The property-based test might not always be correct and relevant to the issue description. ONLY IF NECESSARY, you may modify the property-based test in `/testbed/pbt/test.py`.
+
     Each response should include:
 
     1. **Reasoning text** where you explain your analysis and plan

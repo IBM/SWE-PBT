@@ -52,6 +52,7 @@ def test_swebench_end_to_end(github_test_data, tmp_path, workers, container_exec
             vanilla=True,
             eotter=False,
             potter=False,
+            merged=False,
             tests_file=None,
             environment_class="docker",
         )
@@ -371,6 +372,7 @@ def test_redo_existing_false_skips_existing(github_test_data, tmp_path):
             vanilla=True,
             eotter=False,
             potter=False,
+            merged=False,
             tests_file=None,
         )
 
@@ -409,6 +411,7 @@ def test_redo_existing_true_overwrites_existing(github_test_data, tmp_path, cont
             vanilla=True,
             eotter=False,
             potter=False,
+            merged=False,
             tests_file=None,
             environment_class="docker",
         )
@@ -488,6 +491,7 @@ def test_exception_handling_in_agent_run(tmp_path, workers, container_executable
                 vanilla=True,
                 eotter=False,
                 potter=False,
+                merged=False,
                 tests_file=None,
                 environment_class="docker",
             )
@@ -534,6 +538,7 @@ def test_different_exception_types(tmp_path, workers, container_executable):
                 vanilla=True,
                 eotter=False,
                 potter=False,
+                merged=False,
                 tests_file=None,
                 environment_class="docker",
             )
@@ -568,6 +573,7 @@ def test_exception_handling_with_progress_manager(tmp_path, container_executable
                 vanilla=True,
                 eotter=False,
                 potter=False,
+                merged=False,
                 tests_file=None,
                 environment_class="docker",
             )

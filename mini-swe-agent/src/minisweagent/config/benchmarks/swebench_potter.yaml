@@ -59,7 +59,7 @@ agent:
     - At first, run this command with `IS_REGRESSION=True` to run the regression branch. Print the test output.
     - Then, run this command with `IS_REGRESSION=False` to run the reproduction branch. Print the test output.
     - When generating the fix patches for this issue, you can run either the regression or the reproduction branch of this property-based test.
-    - The property-based test might not always be correct and relevant to the issue description. ONLY IF NECESSARY, you may modify the property-based test in `/testbed/pbt/test.py`.
+    - If the test seems incorrect or incomplete, ignore it and focus on fixing the issue described in the PR description.
 
     Each response should include:
 
