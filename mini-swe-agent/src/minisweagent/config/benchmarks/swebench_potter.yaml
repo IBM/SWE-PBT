@@ -54,12 +54,13 @@ agent:
     - The command to run the property-based test is given below:
 
     ```bash
-    cd /testbed/pbt && IS_REGRESSION=<True/False> pytest --hypothesis-log-all test.py -vs
+    cd /testbed/pbt && IS_REGRESSION=<true/false> pytest --hypothesis-log-all test.py -vs
     ```
-    - At first, run this command with `IS_REGRESSION=True` to run the regression branch. Print the test output.
-    - Then, run this command with `IS_REGRESSION=False` to run the reproduction branch. Print the test output.
-    - When generating the fix patches for this issue, you can run either the regression or the reproduction branch of this property-based test.
-    - The property-based test might not always be correct and relevant to the issue description. ONLY IF NECESSARY, you may modify the property-based test in `/testbed/pbt/test.py`.
+    - At first, run this command with `IS_REGRESSION=true` to run the regression branch. Print the test output.
+    - Then, run this command with `IS_REGRESSION=false` to run the reproduction branch. Print the test output.
+    - The `IS_REGRESSION` environment variable is case-sensitive and must be set to either `true` or `false` (all lowercase).
+    - When generating the fix patches for this issue, you can run either the regression or the reproduction branch of this property-based test as many times as necessary.
+    - If the test seems incorrect or incomplete, ignore it and focus on fixing the issue described in the description.
 
     Each response should include:
 

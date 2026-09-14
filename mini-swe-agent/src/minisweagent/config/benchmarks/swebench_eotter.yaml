@@ -66,7 +66,7 @@ agent:
     accordingly — check `pyproject.toml`, `tox.ini`, `Makefile`, or the project README.
 
     - After applying your fix, re-run the test to confirm it passes.
-    - The test might not always be perfectly correct. ONLY IF NECESSARY, you may modify it.
+    - If the test seems incorrect or incomplete, ignore it and focus on fixing the issue described in the description.
 
     Each response should include:
 
