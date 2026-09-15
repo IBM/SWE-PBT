@@ -30,21 +30,21 @@ class HypothesisLogger:
     
     def _example_hash(self, args, kwargs):
         """Create a hash to detect duplicate examples"""
-        example_str = f"{args}_{kwargs}"
+        example_str = "{0}_{1}".format(args, kwargs)
         return hashlib.md5(example_str.encode()).hexdigest()
     
     def _make_json_serializable(self, obj, depth=0, max_depth=3):
         """Convert objects to JSON-serializable format, recursively extracting attributes"""
         # Prevent infinite recursion
         if depth > max_depth:
-            return f"<{type(obj).__name__}: max depth reached>"
+            return "<{0}: max depth reached>".format(type(obj).__name__)
         
         # First check if it's already JSON serializable
         if isinstance(obj, (str, int, float, bool, type(None))):
             return obj
         
         if isinstance(obj, bytes):
-            return f"<bytes: {obj[:50]!r}{'...' if len(obj) > 50 else ''}>"
+            return "<bytes: {0!r}{1}>".format(obj[:50], '...' if len(obj) > 50 else '')
         elif isinstance(obj, (list, tuple)):
             return [self._make_json_serializable(item, depth + 1, max_depth) for item in obj]
         elif isinstance(obj, dict):
@@ -64,17 +64,17 @@ class HypothesisLogger:
                             try:
                                 obj_dict[key] = self._make_json_serializable(value, depth + 1, max_depth)  # type: ignore
                             except Exception:
-                                obj_dict[key] = f"<error extracting {key}>"
+                                obj_dict[key] = "<error extracting {0}>".format(key)
                     return obj_dict
                 else:
                     # Fallback to string representation
                     obj_str = str(obj)
                     if len(obj_str) > 100:
                         obj_str = obj_str[:100] + "..."
-                    return f"<{type(obj).__name__}: {obj_str}>"
+                    return "<{0}: {1}>".format(type(obj).__name__, obj_str)
             except Exception as e:
                 # If extraction fails, just use the type name
-                return f"<{type(obj).__name__} object: extraction failed>"
+                return "<{0} object: extraction failed>".format(type(obj).__name__)
     
     def log_example(self, args, kwargs, outcome, error=None):
         if self.current_test:
@@ -108,7 +108,7 @@ class HypothesisLogger:
     
     def save_summary(self):
         """Save all test data to summary file"""
-        with open(self.summary_file, 'w') as f:
+        with open(str(self.summary_file), 'w') as f:
             json.dump(self.test_data, f, indent=2)
 
 hypothesis_logger = HypothesisLogger()
@@ -171,17 +171,17 @@ def pytest_runtest_call(item):
         result = 'passed' if not outcome.excinfo else 'failed'
         num_failures = hypothesis_logger.test_data.get(item.nodeid, {}).get('failing_count', 0)
         if num_failures:
-            print(f"\n[WARN] Found {num_failures} failures")
+            print("\n[WARN] Found {0} failures".format(num_failures))
         hypothesis_logger.finish_test(item.nodeid, result)
 
 def pytest_sessionfinish(session, exitstatus):
     """Save summary after all tests complete"""
     hypothesis_logger.save_summary()
     total = sum(len(test['examples']) for test in hypothesis_logger.test_data.values())
-    print(f"\n[OK] Hypothesis summary saved to {hypothesis_logger.summary_file}")
-    print(f"[OK] Total examples logged: {total}")
+    print("\n[OK] Hypothesis summary saved to {0}".format(hypothesis_logger.summary_file))
+    print("[OK] Total examples logged: {0}".format(total))
     for test_id, data in hypothesis_logger.test_data.items():
-        print(f"  {test_id}: {data['passing_count']} passed, {data['failing_count']} failed")
+        print("  {0}: {1} passed, {2} failed".format(test_id, data['passing_count'], data['failing_count']))
 
 def pytest_addoption(parser):
     """Add command-line options"""
