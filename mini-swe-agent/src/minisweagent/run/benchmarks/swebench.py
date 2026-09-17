@@ -8,6 +8,7 @@ import json
 import random
 import re
 import subprocess
+import tempfile
 import threading
 import time
 import traceback
@@ -129,6 +130,38 @@ def remove_from_preds_file(output_path: Path, instance_id: str):
 _CONFTEST_SRC = Path(__file__).parents[5] / "test-generation" / "conftest.py"
 
 
+def _apply_patch_in_container(env, instance_id: str, patch: str) -> None:
+    """Apply a git patch inside the container.
+
+    The patch is written to a local temp file and `docker cp`'d in, then applied
+    from that file path. Embedding arbitrary patch content into a shell command
+    (e.g. `echo <repr(patch)> | git apply -`) is unsafe: patch content routinely
+    contains single quotes (from ordinary Python string literals), which a Python
+    repr()-style escape does not survive bash's single-quote parsing. Depending on
+    where the quotes fall, that either raises a shell syntax error or -- worse --
+    silently mangles the command into something that exits 0 without applying
+    anything, which the old pipe/heredoc fallback couldn't detect either way.
+    """
+    docker_exe = env.config.executable
+    container_id = env.container_id
+
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".patch", delete=False) as f:
+        f.write(patch)
+        tmp_patch_path = f.name
+    try:
+        container_patch_path = f"/tmp/{instance_id}.patch"
+        subprocess.run(
+            [docker_exe, "cp", tmp_patch_path, f"{container_id}:{container_patch_path}"],
+            check=True,
+        )
+    finally:
+        Path(tmp_patch_path).unlink(missing_ok=True)
+
+    out = env.execute({"command": f"git -C /testbed apply -v {container_patch_path}"})
+    if out["returncode"] != 0:
+        raise RuntimeError(f"[{instance_id}] Failed to apply patch: {out['output']}")
+
+
 def _setup_pbt_in_container(
     env,
     instance_id: str,
@@ -156,30 +189,9 @@ def _setup_pbt_in_container(
     )
 
     # 4. Apply the PBT patch to produce /testbed/pbt/test.py
-    apply_cmd = "git apply -v -"
-    out = env.execute({"command": f"echo {json.dumps(pbt_patch)!r} | {apply_cmd}"})
-    # git apply writes files relative to the repo root (/testbed), so the patch path
-    # determines where the file lands. If the patch targets a different path we copy it.
-    if out["returncode"] != 0:
-        # Fallback: write the patch via heredoc and apply
-        escaped = pbt_patch.replace("'", "'\\''")
-        heredoc_cmd = f"git -C /testbed apply -v - <<'__PATCH__'\n{pbt_patch}\n__PATCH__"
-        out = env.execute({"command": heredoc_cmd})
-        if out["returncode"] != 0:
-            raise RuntimeError(f"[{instance_id}] Failed to apply PBT patch: {out['output']}")
+    _apply_patch_in_container(env, instance_id, pbt_patch)
 
     logger.info(f"[{instance_id}] PBT setup complete")
-
-
-def _apply_patch_in_container(env, instance_id: str, patch: str) -> None:
-    """Apply a git patch inside the container (pipe then heredoc fallback)."""
-    apply_cmd = "git apply -v -"
-    out = env.execute({"command": f"echo {json.dumps(patch)!r} | {apply_cmd}"})
-    if out["returncode"] != 0:
-        heredoc_cmd = f"git -C /testbed apply -v - <<'__PATCH__'\n{patch}\n__PATCH__"
-        out = env.execute({"command": heredoc_cmd})
-        if out["returncode"] != 0:
-            raise RuntimeError(f"[{instance_id}] Failed to apply patch: {out['output']}")
 
 
 def _setup_eotter_in_container(env, instance_id: str, patch: str) -> None:
