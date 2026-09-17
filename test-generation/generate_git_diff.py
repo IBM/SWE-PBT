@@ -65,16 +65,22 @@ def delete_folder(folder_path):
         print(f"Error deleting folder: {e}")
 
 
-def generate_git_diff(instance, model, version, output_dir, istemp=False):
+def generate_git_diff(instance, model, version, output_dir, istemp=False, forced_filename=None):
     """
     Generate git diff for a test file
-    
+
     Args:
         instance: Dictionary containing instance information
         model: Model name used for generation
         version: Version identifier
         output_dir: Directory containing model outputs
-    
+        forced_filename: If set, always use this path as the diff target instead of
+            trusting the LLM's self-reported 'file'/'classname' fields. The harness on
+            the consuming side (mini-swe-agent's PBT setup, the prompt template, the
+            hardcoded pytest invocation) all assume a fixed path -- letting the model
+            pick its own filename occasionally produces a diff that applies cleanly but
+            lands at the wrong path, which then looks like the test file is missing.
+
     Returns:
         Git diff string or None if error
     """
@@ -123,7 +129,7 @@ def generate_git_diff(instance, model, version, output_dir, istemp=False):
     # Extract test file information
     test_content = data.get('function', '')
     classname = data.get('classname', '')
-    filename = data.get('file', classname)
+    filename = forced_filename if forced_filename is not None else data.get('file', classname)
     
     # Ensure filename has .py extension for Python files
     if not filename.endswith('.py'):

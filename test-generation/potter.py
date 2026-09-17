@@ -105,7 +105,7 @@ if __name__ == "__main__":
     # =====================================================
     
     print("Generate test diff ...")
-    test_diff = generate_git_diff(instance, args.model, args.version, "model_output")
+    test_diff = generate_git_diff(instance, args.model, args.version, "model_output", forced_filename="pbt/test.py")
     
     # Save git diff to output.json
     output_file = args.output_file
