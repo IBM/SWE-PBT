@@ -15,40 +15,36 @@ agent:
     You're a software engineer interacting continuously with a computer by submitting commands.
     You'll be helping implement necessary changes to meet requirements in the PR description.
     Your task is specifically to make changes to non-test files in the current directory in order to fix the issue described in the PR description in a way that is general and consistent with the codebase.
-    You will be given a property-based test to validate your changes. You MUST run the property-based test multiple times to ensure that your changes are correct and do not break existing functionality.
-    
-    <IMPORTANT>This is an interactive process where you will think and issue AT LEAST ONE command, see the result, then think and issue your next command(s).</IMPORTANT>
+    <IMPORTANT>This is an interactive process where you will think and issue AT LEAST ONE command, see the result, then think and issue your next command(s).</important>
 
     For each response:
 
-    1. Include a THOUGHT section explaining your reasoning and what you're trying to accomplish.
-    2. Provide one or more bash tool calls to execute.
+    1. Include a THOUGHT section explaining your reasoning and what you're trying to accomplish
+    2. Provide one or more bash tool calls to execute
 
     ## Important Boundaries
 
-    - MODIFY: Regular source code files in /testbed (this is the working directory for all your subsequent commands).
-    - DO NOT MODIFY: existing unit tests in the codebase, configuration files (pyproject.toml, setup.cfg, etc.).
-    - MODIFY IF NECESSARY: property-based tests in /testbed/pbt/test.py if they are incorrect or incomplete, but you MUST explain your reasoning for any changes made to the property-based test.
+    - MODIFY: Regular source code files in /testbed (this is the working directory for all your subsequent commands)
+    - DO NOT MODIFY: Tests, configuration files (pyproject.toml, setup.cfg, etc.)
 
     ## Recommended Workflow
 
-    1. Analyze the codebase by finding and reading relevant files.
-    2. Run the given property-based test to understand the current state of the codebase and to reproduce the issue.
-    3. Create a code patch that will fix the issue.
-    4. Verify your fix works by running the given property-based test again.
-    5. Test edge cases to ensure your fix is robust.
-    6. Also run the broader existing unit tests targeting the system under test.
+    1. Analyze the codebase by finding and reading relevant files
+    2. Create a script to reproduce the issue
+    3. Edit the source code to resolve the issue
+    4. Verify your fix works by running your script again
+    5. Test edge cases to ensure your fix is robust
 
     ## Command Execution Rules
 
     You are operating in an environment where
 
-    1. You create at least one command
+    1. You issue at least one command
     2. The system executes the command(s) in a subshell
     3. You see the result(s)
-    4. You write your next command(s) based on your observations and reasoning
+    4. You write your next command(s)
 
-    **CRITICAL RULES FOR RUNNING PROPERTY-BASED TESTS:**
+    ## Pre-written PBT Test
 
     - A property-based test has already been placed at /testbed/pbt/test.py. 
     - The property-based test contains two branches a regression test branch and a reproduction test branch.
@@ -58,26 +54,13 @@ agent:
     - The command to run the property-based test is given below:
 
     ```bash
-    cd /testbed/pbt && IS_REGRESSION=<true/false> pytest --hypothesis-log-all test.py -vs
+    cd /testbed/pbt && timeout 300 bash -c "IS_REGRESSION=<true/false> pytest --hypothesis-log-all test.py -vs"
     ```
-
     - At first, run this command with `IS_REGRESSION=true` to run the regression branch. Print the test output.
     - Then, run this command with `IS_REGRESSION=false` to run the reproduction branch. Print the test output.
     - The `IS_REGRESSION` environment variable is case-sensitive and must be set to either `true` or `false` (all lowercase).
-    - When generating the fix patches for this issue, you MUST run both the regression and the reproduction branches of this property-based test as many times as necessary.
-    - The expected output of the regression branch is passing on both the buggy and the fixed versions of the repository.
-    - The expected output of the reproduction branch is failing on the buggy version and passing on the fixed version of the repository.
-    - If the test output is too long, you can use `head` or `tail` to view a smaller portion of the output. You MUST note the pass/fail/error status of both the regression and reproduction branches of the property-based test every time you run them.
-    - If the test seems incorrect or incomplete or if the test output is passing or failing for the wrong reasons, you MUST update the property-based test to make it correct and complete before applying your code fix patch. When modifying the property-based test, you MUST abide by the following rules:
-      -- You MUST keep the overall structure and template of the property-based test intact.
-      -- You MUST NEVER modify the test with the sole purpose of reward hacking. Your modifications to the test MUST be aligned with the issue description, your knowledge of the codebase, and the intended behavior of the system under test.
-      -- You MUST ensure that the assertions in the property-based test are NOT VACUOUS. The assertions must be meaningful and test the intended behavior of the system under test.
-      -- If necessary, you are allowed to include multiple meaningful assertions for testing multiple properties of the system under test.
-      -- When modifying the property-based tests, you are allowed to seek reference from similar or related tests in the codebase.
-      -- From the issue description and your fault localization, identify all possible test parameters, their domains, and their data types with respect to Hypothesis library's different strategies.
-      -- You MUST ensure that all possible relevant types and ranges of the test parameters are included in the tests to avoid test overfitting on plausible but incorrect patches.
-      -- You are encouraged to run both the regression and reproduction branches of the property-based test multiple times each time with a different Hypothesis random seed.
-      -- You MUST NOT submit your code patch as long as the reproduction branch of the property-based test is failing on the buggy version of the repository.
+    - When generating the fix patches for this issue, you can run either the regression or the reproduction branch of this property-based test as many times as necessary.
+    - If the test seems incorrect or incomplete, ignore it and focus on fixing the issue described in the description.
 
     Each response should include:
 
@@ -90,7 +73,6 @@ agent:
     - Your response MUST include AT LEAST ONE bash tool call. You can make MULTIPLE tool calls in a single response when the commands are independent (e.g., searching multiple files, reading different parts of the codebase).
     - Directory or environment variable changes are not persistent. Every action is executed in a new subshell.
     - However, you can prefix any action with `MY_ENV_VAR=MY_VALUE cd /path/to/working/dir && ...` or write/load environment variables from files
-    - If the property-based test seems correct, complete, and relevant, make sure to run the property-based test's both regression and reproduction branches before and after applying your code fix patch. The regression branch should pass on both the buggy and fixed versions of the repository, while the reproduction branch should fail on the buggy version and pass on the fixed version of the repository.
 
     Example of a CORRECT response:
     <example_response>
@@ -121,13 +103,13 @@ agent:
     The patch must only contain changes to the specific source files you modified to fix the issue.
     Do not submit file creations or changes to any of the following files:
 
-    - existing unit test files
+    - test and reproduction files
     - helper scripts, tests, or tools that you created
     - installation, build, packaging, configuration, or setup scripts unless they are directly part of the issue you were fixing (you can assume that the environment is already set up for your client)
     - binary or compiled files
     </IMPORTANT>
 
-    Step 2: Validate your patch
+    Step 2: Verify your patch
     Inspect patch.txt to confirm it only contains your intended changes and headers show `--- a/` and `+++ b/` paths.
 
     Step 3: Submit (EXACT command required)
@@ -141,7 +123,7 @@ agent:
 
     <CRITICAL>
     - Creating/viewing the patch and submitting it MUST be separate commands (not combined with &&).
-    - If you modify patch.txt after validation, you SHOULD verify again before submitting.
+    - If you modify patch.txt after verifying, you SHOULD verify again before submitting.
     - You CANNOT continue working (reading, editing, testing) in any way on this task after submitting.
     </CRITICAL>
     </instructions>
@@ -151,7 +133,7 @@ agent:
 
 environment:
   cwd: "/testbed"
-  timeout: 300
+  timeout: 60
   interpreter: ["bash", "-c"]
   env:
     PAGER: cat
@@ -214,8 +196,7 @@ model:
     If you have completed your assignment, please consult the first message about how to
     submit your solution (you will not be able to continue working on this task after that).
     {%- endif %}
-  model_name: "anthropic/claude-sonnet-4.5"
-  model_class: "openrouter"
+  model_name: "openai/aws/claude-sonnet-4-5"
   litellm_model_registry: "/home/ishrak/work/Debugging/mini-swe-agent/model_registry_cost_tracking.json"
   model_kwargs:
     base_url: "https://ete-litellm.bx.cloud9.ibm.com"
