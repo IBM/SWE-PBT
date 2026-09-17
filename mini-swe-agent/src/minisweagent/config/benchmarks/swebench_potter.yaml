@@ -54,7 +54,7 @@ agent:
     - The command to run the property-based test is given below:
 
     ```bash
-    cd /testbed/pbt && IS_REGRESSION=<true/false> pytest --hypothesis-log-all test.py -vs
+    cd /testbed/pbt && timeout 300 bash -c "IS_REGRESSION=<true/false> pytest --hypothesis-log-all test.py -vs"
     ```
     - At first, run this command with `IS_REGRESSION=true` to run the regression branch. Print the test output.
     - Then, run this command with `IS_REGRESSION=false` to run the reproduction branch. Print the test output.
