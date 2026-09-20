@@ -1,0 +1,1814 @@
+<frozen runpy>:128: RuntimeWarning: 'tddbench.harness.run_evaluation' found in sys.modules after import of package 'tddbench.harness', but prior to execution of 'tddbench.harness.run_evaluation'; this may result in unpredictable behaviour
+[main] code patch loader instance=astropy__astropy-14182 extracted_code_patches=1
+[main] code patch loader instance=astropy__astropy-7606 extracted_code_patches=1
+[main] code patch loader instance=django__django-11728 extracted_code_patches=1
+[main] code patch loader instance=django__django-12273 extracted_code_patches=1
+[main] code patch loader instance=django__django-13513 extracted_code_patches=1
+[main] code patch loader instance=django__django-16263 extracted_code_patches=1
+[main] code patch loader instance=django__django-16454 extracted_code_patches=1
+[main] code patch loader instance=matplotlib__matplotlib-23299 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-18199 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-20438 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-20916 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-21596 extracted_code_patches=1
+[main] code patch loader instance=django__django-11433 extracted_code_patches=1
+[main] code patch loader instance=django__django-12308 extracted_code_patches=1
+[main] code patch loader instance=django__django-13344 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-17630 extracted_code_patches=1
+[main] merged instance=astropy__astropy-14182 test_count=1 code_count=1
+[main] instance=astropy__astropy-14182 loaded test_patches=1 code_patches=1
+[main] merged instance=astropy__astropy-7606 test_count=1 code_count=1
+[main] instance=astropy__astropy-7606 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-11728 test_count=1 code_count=1
+[main] instance=django__django-11728 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-12273 test_count=1 code_count=1
+[main] instance=django__django-12273 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-13513 test_count=1 code_count=1
+[main] instance=django__django-13513 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-16263 test_count=1 code_count=1
+[main] instance=django__django-16263 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-16454 test_count=1 code_count=1
+[main] instance=django__django-16454 loaded test_patches=1 code_patches=1
+[main] merged instance=matplotlib__matplotlib-23299 test_count=1 code_count=1
+[main] instance=matplotlib__matplotlib-23299 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-18199 test_count=1 code_count=1
+[main] instance=sympy__sympy-18199 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-20438 test_count=1 code_count=1
+[main] instance=sympy__sympy-20438 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-20916 test_count=1 code_count=1
+[main] instance=sympy__sympy-20916 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-21596 test_count=1 code_count=1
+[main] instance=sympy__sympy-21596 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-11433 test_count=1 code_count=1
+[main] instance=django__django-11433 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-12308 test_count=1 code_count=1
+[main] instance=django__django-12308 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-13344 test_count=1 code_count=1
+[main] instance=django__django-13344 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-17630 test_count=1 code_count=1
+[main] instance=sympy__sympy-17630 loaded test_patches=1 code_patches=1
+Running 16 unevaluated instances...
+Building base image (sweb.base.x86_64:latest)
+Base images built successfully.
+Total environment images to build: 9
+Building environment images:   0%|          | 0/9 [00:00<?, ?it/s]Building environment images:  11%|█         | 1/9 [01:17<10:17, 77.17s/it]Building environment images:  22%|██▏       | 2/9 [01:22<04:47, 41.02s/it]Building environment images:  33%|███▎      | 3/9 [01:27<02:55, 29.17s/it]Building environment images:  44%|████▍     | 4/9 [01:29<01:51, 22.30s/it]Building environment images:  56%|█████▌    | 5/9 [01:31<01:13, 18.39s/it]Building environment images:  67%|██████▋   | 6/9 [01:32<00:46, 15.45s/it]Building environment images:  78%|███████▊  | 7/9 [01:33<00:26, 13.31s/it]Building environment images:  89%|████████▉ | 8/9 [01:35<00:11, 11.94s/it]Building environment images: 100%|██████████| 9/9 [06:23<00:00, 42.63s/it]Building environment images: 100%|██████████| 9/9 [06:23<00:00, 42.63s/it]
+All environment images built successfully.
+[run_instances] instance=astropy__astropy-14182 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=astropy__astropy-7606 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-11433 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-11728 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-12273 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-12308 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-13344 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-13513 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-16263 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-16454 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=matplotlib__matplotlib-23299 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-17630 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-18199 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-20438 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-20916 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-21596 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+Running 16 instances...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:29<07:17, 29.19s/it] 12%|█▎        | 2/16 [00:36<04:12, 18.00s/it] 19%|█▉        | 3/16 [00:38<02:47, 12.87s/it] 25%|██▌       | 4/16 [00:39<01:58,  9.84s/it] 31%|███▏      | 5/16 [00:40<01:28,  8.02s/it] 38%|███▊      | 6/16 [00:44<01:13,  7.40s/it] 44%|████▍     | 7/16 [00:46<00:59,  6.62s/it] 50%|█████     | 8/16 [00:48<00:48,  6.04s/it] 56%|█████▋    | 9/16 [00:48<00:37,  5.40s/it] 62%|██████▎   | 10/16 [00:49<00:29,  4.94s/it] 69%|██████▉   | 11/16 [00:50<00:22,  4.59s/it] 75%|███████▌  | 12/16 [01:11<00:23,  5.94s/it] 81%|████████▏ | 13/16 [01:12<00:16,  5.56s/it] 88%|████████▊ | 14/16 [01:16<00:10,  5.50s/it] 94%|█████████▍| 15/16 [01:53<00:07,  7.56s/it]100%|██████████| 16/16 [04:16<00:00, 16.02s/it]100%|██████████| 16/16 [04:16<00:00, 16.02s/it]
+[run_instance] starting base instance=django__django-11433
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=astropy__astropy-7606
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-11728
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=astropy__astropy-14182
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-12273
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-13344
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-12308
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-13513
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-16263
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-16454
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=matplotlib__matplotlib-23299
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-17630
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-18199
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-20438
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-20916
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-21596
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[build_container] No existing container found, creating new one: sweb.eval.django__django-11433.potter_overfit_recheck
+[build_container] Allocated port mapping: 10000 -> 9999 for sweb.eval.django__django-11433.potter_overfit_recheck
+[build_container] Container created with port mapping: 10000:9999
+[run_instance] container started instance=django__django-11433 container_id=2dda576d49df37869332a3d85d38d115f5b295d236934b6d433642ad379fe0cc
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-11433 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-11433
+
+[run_evaluation] Reset Output: HEAD is now at 21b1d23912 Added CVE-2019-12308 to the security release archive.
+Removing Django.egg-info/
+Removing django/__pycache__/
+Removing django/utils/__pycache__/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for django__django-11433: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/django__django-11433/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-11433; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-11433
+[run_instance] keeping container for instance=django__django-11433 (--keep_container flag set)
+[build_container] No existing container found, creating new one: sweb.eval.sympy__sympy-17630.potter_overfit_recheck
+[build_container] Allocated port mapping: 10001 -> 9999 for sweb.eval.sympy__sympy-17630.potter_overfit_recheck
+[build_container] Container created with port mapping: 10001:9999
+[run_instance] container started instance=sympy__sympy-17630 container_id=d24b7a33fb635458786957283a826d2a8fb503773d12880a5326c120476dfcf8
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-17630 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-17630
+
+[run_evaluation] Reset Output: HEAD is now at 58e78209c8 Merge pull request #17623 from cbm755/dollars_stirling
+Removing sympy.egg-info/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for sympy__sympy-17630: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/sympy__sympy-17630/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-17630; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-17630
+[run_instance] keeping container for instance=sympy__sympy-17630 (--keep_container flag set)
+[build_container] No existing container found, creating new one: sweb.eval.django__django-12273.potter_overfit_recheck
+[build_container] Allocated port mapping: 10002 -> 9999 for sweb.eval.django__django-12273.potter_overfit_recheck
+[build_container] Container created with port mapping: 10002:9999
+[run_instance] container started instance=django__django-12273 container_id=a558959772aff599a9d5b7513128b59e7b942702f3e157e8c47d4cec53725ec0
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-12273 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-12273
+
+[run_evaluation] Reset Output: HEAD is now at 927c903f3c Refs #31097 -- Added release notes for 2f565f84aca136d9cc4e4d061f3196ddf9358ab8.
+Removing Django.egg-info/
+Removing django/__pycache__/
+Removing django/utils/__pycache__/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+[build_container] No existing container found, creating new one: sweb.eval.sympy__sympy-18199.potter_overfit_recheck
+[build_container] Allocated port mapping: 10003 -> 9999 for sweb.eval.sympy__sympy-18199.potter_overfit_recheck
+[build_container] Container created with port mapping: 10003:9999
+Evaluation error for django__django-12273: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/django__django-12273/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-12273; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-12273
+[run_instance] keeping container for instance=django__django-12273 (--keep_container flag set)
+[run_instance] container started instance=sympy__sympy-18199 container_id=936e9e5b191b5ea13dccedb3ed286cc601640ff7682ba0c85f98fecb7bd43ffd
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-18199 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-18199
+[build_container] No existing container found, creating new one: sweb.eval.django__django-13513.potter_overfit_recheck
+[build_container] Allocated port mapping: 10004 -> 9999 for sweb.eval.django__django-13513.potter_overfit_recheck
+[build_container] Container created with port mapping: 10004:9999
+
+[run_evaluation] Reset Output: HEAD is now at ba80d1e493 Merge pull request #18224 from Upabjojr/fix_tensor_index_structure
+Removing sympy.egg-info/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] container started instance=django__django-13513 container_id=6f475db05b10ecf9e393f43650dd28c9d0f5225f0e2c472574a3e7d9c16ce87e
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-13513 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-13513
+Evaluation error for sympy__sympy-18199: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/sympy__sympy-18199/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-18199; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-18199
+[run_instance] keeping container for instance=sympy__sympy-18199 (--keep_container flag set)
+
+[run_evaluation] Reset Output: HEAD is now at 6599608c4d Fixed #32098 -- Made FieldFile use FileField.attname.
+Removing Django.egg-info/
+Removing django/__pycache__/
+Removing django/utils/__pycache__/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for django__django-13513: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/django__django-13513/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-13513; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-13513
+[run_instance] keeping container for instance=django__django-13513 (--keep_container flag set)
+[build_container] No existing container found, creating new one: sweb.eval.sympy__sympy-20438.potter_overfit_recheck
+[build_container] Allocated port mapping: 10005 -> 9999 for sweb.eval.sympy__sympy-20438.potter_overfit_recheck
+[build_container] Container created with port mapping: 10005:9999
+[build_container] No existing container found, creating new one: sweb.eval.sympy__sympy-20916.potter_overfit_recheck
+[build_container] Allocated port mapping: 10005 -> 9999 for sweb.eval.sympy__sympy-20916.potter_overfit_recheck
+[build_container] Container created with port mapping: 10005:9999
+[run_instance] container started instance=sympy__sympy-20438 container_id=d6c0e2aa10091f08608c5145c480affc2a0b4e4684453a4fe2e6fd681370ac04
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-20438 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-20438
+
+[run_evaluation] Reset Output: HEAD is now at 33b47e4bd6 Merge pull request #20646 from Mohitbalwani26/refactor(test_ode)
+Removing sympy.egg-info/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] container start failed (500 Server Error for http+docker://localhost/v1.55/containers/b5639ee93ed7a7e50ea2aeffdb4129014e1924a3bc5dc3fa5b2ea33a1b39d13c/start: Internal Server Error ("failed to set up container networking: driver failed programming external connectivity on endpoint sweb.eval.sympy__sympy-20916.potter_overfit_recheck (2516176f268656f9292bf36bea9edbbb252096e138f3918afb6696ef246b3a47): Bind for 127.0.0.1:10005 failed: port is already allocated")), recreating...
+Evaluation error for sympy__sympy-20438: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/sympy__sympy-20438/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-20438; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-20438
+[run_instance] keeping container for instance=sympy__sympy-20438 (--keep_container flag set)
+[build_container] No existing container found, creating new one: sweb.eval.django__django-16263.potter_overfit_recheck
+[build_container] Allocated port mapping: 10006 -> 9999 for sweb.eval.django__django-16263.potter_overfit_recheck
+[build_container] No existing container found, creating new one: sweb.eval.sympy__sympy-21596.potter_overfit_recheck
+[build_container] Allocated port mapping: 10006 -> 9999 for sweb.eval.sympy__sympy-21596.potter_overfit_recheck
+[build_container] Container created with port mapping: 10006:9999
+[build_container] Container created with port mapping: 10006:9999
+[run_instance] container started instance=django__django-16263 container_id=331c4c489fdcfc35e582ea2740c042cc8b5c62d7a27f13aab98bf9c878c3a30f
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-16263 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-16263
+[run_instance] container start failed (500 Server Error for http+docker://localhost/v1.55/containers/300fa4745e2e87b1e7b127e8e743ecd85dd3ff5988826c14499709f7b84e7007/start: Internal Server Error ("failed to set up container networking: driver failed programming external connectivity on endpoint sweb.eval.sympy__sympy-21596.potter_overfit_recheck (de212b3dbe6cba60135f7c480e27d010667f0acf49a84d011ca3a612710b51b0): Bind for 127.0.0.1:10006 failed: port is already allocated")), recreating...
+
+[run_evaluation] Reset Output: HEAD is now at 321ecb40f4 Fixed #34135 -- Added async-compatible interface to related managers.
+Removing Django.egg-info/
+Removing django/__pycache__/
+Removing django/utils/__pycache__/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for django__django-16263: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/django__django-16263/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-16263; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-16263
+[run_instance] keeping container for instance=django__django-16263 (--keep_container flag set)
+[build_container] No existing container found, creating new one: sweb.eval.django__django-13344.potter_overfit_recheck
+[build_container] Allocated port mapping: 10007 -> 9999 for sweb.eval.django__django-13344.potter_overfit_recheck
+[build_container] Container created with port mapping: 10007:9999
+[build_container] No existing container found, creating new one: sweb.eval.django__django-11728.potter_overfit_recheck
+[build_container] Allocated port mapping: 10007 -> 9999 for sweb.eval.django__django-11728.potter_overfit_recheck
+[build_container] Container created with port mapping: 10007:9999
+[run_instance] container started instance=django__django-13344 container_id=785b77e5193f0cc22d120b17e523c22d4291d848a4798fcc139b346ebbdb8274
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-13344 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-13344
+[build_container] No existing container found, creating new one: sweb.eval.django__django-16454.potter_overfit_recheck
+[build_container] Allocated port mapping: 10008 -> 9999 for sweb.eval.django__django-16454.potter_overfit_recheck
+[run_instance] container start failed (500 Server Error for http+docker://localhost/v1.55/containers/76aae296c90f447e328fbe1a3d5afe6220669c64a3e1e20a9938e8b3c13a0a58/start: Internal Server Error ("failed to set up container networking: driver failed programming external connectivity on endpoint sweb.eval.django__django-11728.potter_overfit_recheck (2c88f63fcf49e4ab0fb2684b1bcdad3e4fb68663d0afc356cb1cb0ba69c05a98): Bind for 127.0.0.1:10007 failed: port is already allocated")), recreating...
+[build_container] Container created with port mapping: 10008:9999
+
+[run_evaluation] Reset Output: HEAD is now at e39e727ded Fixed #31912 -- Removed strict=True in Path.resolve() in project template and CommonPasswordValidator.
+Removing Django.egg-info/
+Removing django/__pycache__/
+Removing django/utils/__pycache__/
+
+
+[run_instance] container started instance=django__django-16454 container_id=2eae63ad4801bae533307433fe2bdd71a15698db0bf0bca6aceadeb4b8c51ce5
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-16454 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-16454
+[build_container] reuse_container=False, creating new container: sweb.eval.django__django-11728.potter_overfit_recheck
+[build_container] Allocated port mapping: 10009 -> 9999 for sweb.eval.django__django-11728.potter_overfit_recheck
+[run_instance] applying test patch for contributing test discovery version=1
+[build_container] Container created with port mapping: 10009:9999
+Evaluation error for django__django-13344: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/django__django-13344/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-13344; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-13344
+[run_instance] keeping container for instance=django__django-13344 (--keep_container flag set)
+
+[run_evaluation] Reset Output: HEAD is now at 1250483ebf Fixed #34286 -- Fixed admindocs markups for case-sensitive template/view names.
+Removing Django.egg-info/
+Removing django/__pycache__/
+Removing django/utils/__pycache__/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] container started instance=django__django-11728 container_id=b1071b1072c8a77b7d4a2f58c1c13e41de0b513d0140135c559877e041d51811
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-11728 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-11728
+Evaluation error for django__django-16454: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/django__django-16454/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-16454; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-16454
+[run_instance] keeping container for instance=django__django-16454 (--keep_container flag set)
+
+[run_evaluation] Reset Output: HEAD is now at 0545781764 Fixed #30736 -- Added Storage.get_alternative_name() to allow customization.
+Removing Django.egg-info/
+Removing django/__pycache__/
+Removing django/utils/__pycache__/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for django__django-11728: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/django__django-11728/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-11728; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-11728
+[run_instance] keeping container for instance=django__django-11728 (--keep_container flag set)
+[build_container] No existing container found, creating new one: sweb.eval.django__django-12308.potter_overfit_recheck
+[build_container] Allocated port mapping: 10010 -> 9999 for sweb.eval.django__django-12308.potter_overfit_recheck
+[build_container] Container created with port mapping: 10010:9999
+[run_instance] container started instance=django__django-12308 container_id=e224a072863fef03a12adfebf485b3b1266242744fafddf1995de8d8bc74b8e6
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-12308 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-12308
+
+[run_evaluation] Reset Output: HEAD is now at 2e0f04507b Added tests for loaddata with gzip/bzip2 compressed fixtures.
+Removing Django.egg-info/
+Removing django/__pycache__/
+Removing django/utils/__pycache__/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for django__django-12308: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/django__django-12308/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-12308; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-12308
+[run_instance] keeping container for instance=django__django-12308 (--keep_container flag set)
+[build_container] reuse_container=False, creating new container: sweb.eval.sympy__sympy-20916.potter_overfit_recheck
+[build_container] Allocated port mapping: 10011 -> 9999 for sweb.eval.sympy__sympy-20916.potter_overfit_recheck
+[build_container] Container created with port mapping: 10011:9999
+[run_instance] container started instance=sympy__sympy-20916 container_id=6d6e6807cfa17f1cc56e400fd12f635baf9daa2db8f717cb1f10f1af3e64af75
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-20916 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-20916
+
+[run_evaluation] Reset Output: HEAD is now at 82298df6a5 Merge pull request #20912 from techiepriyansh/patch-1
+Removing sympy.egg-info/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for sympy__sympy-20916: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/sympy__sympy-20916/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-20916; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-20916
+[run_instance] keeping container for instance=sympy__sympy-20916 (--keep_container flag set)
+[build_container] reuse_container=False, creating new container: sweb.eval.sympy__sympy-21596.potter_overfit_recheck
+[build_container] Allocated port mapping: 10012 -> 9999 for sweb.eval.sympy__sympy-21596.potter_overfit_recheck
+[build_container] Container created with port mapping: 10012:9999
+[run_instance] container started instance=sympy__sympy-21596 container_id=71a9f74c7738e8e8ac4afddbbb8c91855dbbffbdaa763b34de6bb07d74eed3f4
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-21596 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-21596
+
+[run_evaluation] Reset Output: HEAD is now at 110997fe18 Merge pull request #21510 from migueltorrescosta/master
+Removing sympy.egg-info/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for sympy__sympy-21596: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/sympy__sympy-21596/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-21596; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-21596
+[run_instance] keeping container for instance=sympy__sympy-21596 (--keep_container flag set)
+[build_container] No existing container found, creating new one: sweb.eval.astropy__astropy-14182.potter_overfit_recheck
+[build_container] Allocated port mapping: 10013 -> 9999 for sweb.eval.astropy__astropy-14182.potter_overfit_recheck
+[build_container] Container created with port mapping: 10013:9999
+[run_instance] container started instance=astropy__astropy-14182 container_id=9b9366d068a37d84947d50b1c3823563112217e64d1ede2afb59d3608f64590d
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=astropy__astropy-14182 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=astropy__astropy-14182
+
+[run_evaluation] Reset Output: HEAD is now at a5917978be Merge pull request #14172 from astropy/pre-commit-ci-update-config
+Removing astropy/_compiler.c
+Removing astropy/compiler_version.cpython-39-x86_64-linux-gnu.so
+Removing astropy/convolution/__pycache__/
+Removing astropy/convolution/_convolve.c
+Removing astropy/convolution/_convolve.cpython-39-x86_64-linux-gnu.so
+Removing astropy/cosmology/flrw/scalar_inv_efuncs.c
+Removing astropy/cosmology/flrw/scalar_inv_efuncs.cpython-39-x86_64-linux-gnu.so
+Removing astropy/io/ascii/__pycache__/
+Removing astropy/io/ascii/cparser.c
+Removing astropy/io/ascii/cparser.cpython-39-x86_64-linux-gnu.so
+Removing astropy/io/fits/__pycache__/
+Removing astropy/io/fits/_utils.c
+Removing astropy/io/fits/_utils.cpython-39-x86_64-linux-gnu.so
+Removing astropy/io/fits/compression.cpython-39-x86_64-linux-gnu.so
+Removing astropy/io/votable/__pycache__/
+Removing astropy/io/votable/tablewriter.cpython-39-x86_64-linux-gnu.so
+Removing astropy/samp/__pycache__/
+Removing astropy/stats/__pycache__/
+Removing astropy/stats/_fast_sigma_clip.cpython-39-x86_64-linux-gnu.so
+Removing astropy/stats/_stats.c
+Removing astropy/stats/_stats.cpython-39-x86_64-linux-gnu.so
+Removing astropy/table/__pycache__/
+Removing astropy/table/_column_mixins.c
+Removing astropy/table/_column_mixins.cpython-39-x86_64-linux-gnu.so
+Removing astropy/table/_np_utils.c
+Removing astropy/table/_np_utils.cpython-39-x86_64-linux-gnu.so
+Removing astropy/time/__pycache__/
+Removing astropy/time/_parse_times.cpython-39-x86_64-linux-gnu.so
+Removing astropy/timeseries/periodograms/bls/__pycache__/
+Removing astropy/timeseries/periodograms/bls/_impl.c
+Removing astropy/timeseries/periodograms/bls/_impl.cpython-39-x86_64-linux-gnu.so
+Removing astropy/timeseries/periodograms/lombscargle/implementations/cython_impl.c
+Removing astropy/timeseries/periodograms/lombscargle/implementations/cython_impl.cpython-39-x86_64-linux-gnu.so
+Removing astropy/utils/__pycache__/
+Removing astropy/utils/_compiler.cpython-39-x86_64-linux-gnu.so
+Removing astropy/utils/xml/__pycache__/
+Removing astropy/utils/xml/_iterparser.cpython-39-x86_64-linux-gnu.so
+Removing astropy/wcs/__pycache__/
+Removing astropy/wcs/_wcs.cpython-39-x86_64-linux-gnu.so
+Removing astropy/wcs/include/astropy_wcs/docstrings.h
+Removing astropy/wcs/include/astropy_wcs/wcsconfig.h
+Removing astropy/wcs/include/wcsconfig.h
+Removing astropy/wcs/include/wcslib/cel.h
+Removing astropy/wcs/include/wcslib/lin.h
+Removing astropy/wcs/include/wcslib/prj.h
+Removing astropy/wcs/include/wcslib/spc.h
+Removing astropy/wcs/include/wcslib/spx.h
+Removing astropy/wcs/include/wcslib/tab.h
+Removing astropy/wcs/include/wcslib/wcs.h
+Removing astropy/wcs/include/wcslib/wcserr.h
+Removing astropy/wcs/include/wcslib/wcsmath.h
+Removing astropy/wcs/include/wcslib/wcsprintf.h
+Removing astropy/wcs/src/docstrings.c
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for astropy__astropy-14182: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/astropy__astropy-14182/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=astropy__astropy-14182; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=astropy__astropy-14182
+[run_instance] keeping container for instance=astropy__astropy-14182 (--keep_container flag set)
+[build_container] No existing container found, creating new one: sweb.eval.astropy__astropy-7606.potter_overfit_recheck
+[build_container] Allocated port mapping: 10014 -> 9999 for sweb.eval.astropy__astropy-7606.potter_overfit_recheck
+[build_container] Container created with port mapping: 10014:9999
+[run_instance] container started instance=astropy__astropy-7606 container_id=5a0c0877ff9fe087b08d7ab319184518b5845f68ab8b926b5b201d32e92a7ae0
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=astropy__astropy-7606 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=astropy__astropy-7606
+
+[run_evaluation] Reset Output: HEAD is now at 3cedd79e6c Merge pull request #7731 from cclauss/patch-1
+Removing __pycache__/
+Removing astropy.egg-info/
+Removing astropy/__pycache__/
+Removing astropy/_compiler.c
+Removing astropy/_compiler.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/_erfa/__pycache__/
+Removing astropy/_erfa/core.py
+Removing astropy/_erfa/ufunc.c
+Removing astropy/_erfa/ufunc.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/config/__pycache__/
+Removing astropy/convolution/boundary_extend.c
+Removing astropy/convolution/boundary_extend.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/convolution/boundary_fill.c
+Removing astropy/convolution/boundary_fill.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/convolution/boundary_none.c
+Removing astropy/convolution/boundary_none.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/convolution/boundary_wrap.c
+Removing astropy/convolution/boundary_wrap.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/coordinates/__pycache__/
+Removing astropy/cosmology/scalar_inv_efuncs.c
+Removing astropy/cosmology/scalar_inv_efuncs.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/cython_version.py
+Removing astropy/extern/__pycache__/
+Removing astropy/extern/configobj/__pycache__/
+Removing astropy/io/__pycache__/
+Removing astropy/io/ascii/__pycache__/
+Removing astropy/io/ascii/cparser.c
+Removing astropy/io/ascii/cparser.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/io/fits/__pycache__/
+Removing astropy/io/fits/compression.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/io/fits/hdu/__pycache__/
+Removing astropy/io/misc/asdf/__pycache__/
+Removing astropy/io/misc/asdf/tags/fits/__pycache__/
+Removing astropy/io/votable/__pycache__/
+Removing astropy/io/votable/tablewriter.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/modeling/__pycache__/
+Removing astropy/modeling/_projections.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/modeling/src/projections.c
+Removing astropy/modeling/src/wcsconfig.h
+Removing astropy/nddata/__pycache__/
+Removing astropy/samp/__pycache__/
+Removing astropy/stats/bls/__pycache__/
+Removing astropy/stats/bls/_impl.c
+Removing astropy/stats/bls/_impl.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/stats/lombscargle/implementations/cython_impl.c
+Removing astropy/stats/lombscargle/implementations/cython_impl.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/table/__pycache__/
+Removing astropy/table/_column_mixins.c
+Removing astropy/table/_column_mixins.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/table/_np_utils.c
+Removing astropy/table/_np_utils.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/tests/__pycache__/
+Removing astropy/units/__pycache__/
+Removing astropy/units/format/__pycache__/
+Removing astropy/utils/__pycache__/
+Removing astropy/utils/_compiler.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/utils/compat/__pycache__/
+Removing astropy/utils/xml/__pycache__/
+Removing astropy/utils/xml/_iterparser.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/version.py
+Removing astropy/visualization/wcsaxes/tests/__pycache__/
+Removing astropy/wcs/__pycache__/
+Removing astropy/wcs/_wcs.cpython-36m-x86_64-linux-gnu.so
+Removing astropy/wcs/include/astropy_wcs/docstrings.h
+Removing astropy/wcs/include/astropy_wcs/wcsconfig.h
+Removing astropy/wcs/include/wcsconfig.h
+Removing astropy/wcs/include/wcslib/cel.h
+Removing astropy/wcs/include/wcslib/lin.h
+Removing astropy/wcs/include/wcslib/prj.h
+Removing astropy/wcs/include/wcslib/spc.h
+Removing astropy/wcs/include/wcslib/spx.h
+Removing astropy/wcs/include/wcslib/tab.h
+Removing astropy/wcs/include/wcslib/wcs.h
+Removing astropy/wcs/include/wcslib/wcserr.h
+Removing astropy/wcs/include/wcslib/wcsmath.h
+Removing astropy/wcs/include/wcslib/wcsprintf.h
+Removing astropy/wcs/src/docstrings.c
+Removing build/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for astropy__astropy-7606: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/astropy__astropy-7606/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=astropy__astropy-7606; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=astropy__astropy-7606
+[run_instance] keeping container for instance=astropy__astropy-7606 (--keep_container flag set)
+[build_container] No existing container found, creating new one: sweb.eval.matplotlib__matplotlib-23299.potter_overfit_recheck
+[build_container] Allocated port mapping: 10015 -> 9999 for sweb.eval.matplotlib__matplotlib-23299.potter_overfit_recheck
+[build_container] Container created with port mapping: 10015:9999
+[run_instance] container started instance=matplotlib__matplotlib-23299 container_id=25a2e2287a08b179b3c22c5c05f8b34654e42d1b1fdada50c5ff71777cf35d60
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=matplotlib__matplotlib-23299 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=matplotlib__matplotlib-23299
+
+[run_evaluation] Reset Output: HEAD is now at 3eadeacc06 Merge pull request #23347 from anntzer/gtkcairo
+Removing __pycache__/
+Removing build/
+Removing lib/matplotlib/_c_internal_utils.cpython-311-x86_64-linux-gnu.so
+Removing lib/matplotlib/_image.cpython-311-x86_64-linux-gnu.so
+Removing lib/matplotlib/_path.cpython-311-x86_64-linux-gnu.so
+Removing lib/matplotlib/_qhull.cpython-311-x86_64-linux-gnu.so
+Removing lib/matplotlib/_tri.cpython-311-x86_64-linux-gnu.so
+Removing lib/matplotlib/_ttconv.cpython-311-x86_64-linux-gnu.so
+Removing lib/matplotlib/_version.py
+Removing lib/matplotlib/backends/_backend_agg.cpython-311-x86_64-linux-gnu.so
+Removing lib/matplotlib/backends/_tkagg.cpython-311-x86_64-linux-gnu.so
+Removing lib/matplotlib/ft2font.cpython-311-x86_64-linux-gnu.so
+Removing mplsetup.cfg
+Removing tmp/
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for matplotlib__matplotlib-23299: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_200/scratchpad/matplotlib__matplotlib-23299/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=matplotlib__matplotlib-23299; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=matplotlib__matplotlib-23299
+[run_instance] keeping container for instance=matplotlib__matplotlib-23299 (--keep_container flag set)
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 16
+Instances submitted: 16
+Instances completed: 0
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 16
+Unstopped containers: 0
+Unremoved images: 16
+Final score: 0.0
+Report written to scratchpad.potter_overfit_recheck_examples_200.json
+<frozen runpy>:128: RuntimeWarning: 'tddbench.harness.run_evaluation' found in sys.modules after import of package 'tddbench.harness', but prior to execution of 'tddbench.harness.run_evaluation'; this may result in unpredictable behaviour
+[main] code patch loader instance=astropy__astropy-14182 extracted_code_patches=1
+[main] code patch loader instance=astropy__astropy-7606 extracted_code_patches=1
+[main] code patch loader instance=django__django-11728 extracted_code_patches=1
+[main] code patch loader instance=django__django-12273 extracted_code_patches=1
+[main] code patch loader instance=django__django-13513 extracted_code_patches=1
+[main] code patch loader instance=django__django-16263 extracted_code_patches=1
+[main] code patch loader instance=django__django-16454 extracted_code_patches=1
+[main] code patch loader instance=matplotlib__matplotlib-23299 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-18199 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-20438 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-20916 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-21596 extracted_code_patches=1
+[main] code patch loader instance=django__django-11433 extracted_code_patches=1
+[main] code patch loader instance=django__django-12308 extracted_code_patches=1
+[main] code patch loader instance=django__django-13344 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-17630 extracted_code_patches=1
+[main] merged instance=astropy__astropy-14182 test_count=1 code_count=1
+[main] instance=astropy__astropy-14182 loaded test_patches=1 code_patches=1
+[main] merged instance=astropy__astropy-7606 test_count=1 code_count=1
+[main] instance=astropy__astropy-7606 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-11728 test_count=1 code_count=1
+[main] instance=django__django-11728 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-12273 test_count=1 code_count=1
+[main] instance=django__django-12273 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-13513 test_count=1 code_count=1
+[main] instance=django__django-13513 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-16263 test_count=1 code_count=1
+[main] instance=django__django-16263 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-16454 test_count=1 code_count=1
+[main] instance=django__django-16454 loaded test_patches=1 code_patches=1
+[main] merged instance=matplotlib__matplotlib-23299 test_count=1 code_count=1
+[main] instance=matplotlib__matplotlib-23299 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-18199 test_count=1 code_count=1
+[main] instance=sympy__sympy-18199 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-20438 test_count=1 code_count=1
+[main] instance=sympy__sympy-20438 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-20916 test_count=1 code_count=1
+[main] instance=sympy__sympy-20916 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-21596 test_count=1 code_count=1
+[main] instance=sympy__sympy-21596 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-11433 test_count=1 code_count=1
+[main] instance=django__django-11433 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-12308 test_count=1 code_count=1
+[main] instance=django__django-12308 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-13344 test_count=1 code_count=1
+[main] instance=django__django-13344 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-17630 test_count=1 code_count=1
+[main] instance=sympy__sympy-17630 loaded test_patches=1 code_patches=1
+Running 16 unevaluated instances...
+Base image sweb.base.x86_64:latest already exists, skipping build.
+Base images built successfully.
+No environment images need to be built.
+[run_instances] instance=astropy__astropy-14182 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=astropy__astropy-7606 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-11433 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-11728 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-12273 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-12308 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-13344 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-13513 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-16263 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-16454 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=matplotlib__matplotlib-23299 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-17630 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-18199 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-20438 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-20916 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-21596 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+Found 16 existing instance images. Will reuse them.
+Running 16 instances...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:00<00:05,  2.55it/s] 69%|██████▉   | 11/16 [00:00<00:00, 21.53it/s]100%|██████████| 16/16 [00:00<00:00, 29.88it/s]
+[run_instance] starting base instance=astropy__astropy-14182
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-11433
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=astropy__astropy-7606
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-11728
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-12273
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-12308
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-13344
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-13513
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-16263
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=matplotlib__matplotlib-23299
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-16454
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-17630
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-18199
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-21596
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-20916
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-20438
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[build_container] Reusing existing container: sweb.eval.django__django-13513.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-13513 container_id=6f475db05b10ecf9e393f43650dd28c9d0f5225f0e2c472574a3e7d9c16ce87e
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-13513 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-13513
+[build_container] Reusing existing container: sweb.eval.astropy__astropy-7606.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=astropy__astropy-7606 container_id=5a0c0877ff9fe087b08d7ab319184518b5845f68ab8b926b5b201d32e92a7ae0
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=astropy__astropy-7606 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=astropy__astropy-7606
+[build_container] Reusing existing container: sweb.eval.django__django-11433.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-11433 container_id=2dda576d49df37869332a3d85d38d115f5b295d236934b6d433642ad379fe0cc
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-11433 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-11433
+[build_container] Reusing existing container: sweb.eval.django__django-12308.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-12308 container_id=e224a072863fef03a12adfebf485b3b1266242744fafddf1995de8d8bc74b8e6
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-12308 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-12308
+[build_container] Reusing existing container: sweb.eval.astropy__astropy-14182.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=astropy__astropy-14182 container_id=9b9366d068a37d84947d50b1c3823563112217e64d1ede2afb59d3608f64590d
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=astropy__astropy-14182 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=astropy__astropy-14182
+[build_container] Reusing existing container: sweb.eval.django__django-12273.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-12273 container_id=a558959772aff599a9d5b7513128b59e7b942702f3e157e8c47d4cec53725ec0
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-12273 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-12273
+[build_container] Reusing existing container: sweb.eval.django__django-13344.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-13344 container_id=785b77e5193f0cc22d120b17e523c22d4291d848a4798fcc139b346ebbdb8274
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-13344 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-13344
+[build_container] Reusing existing container: sweb.eval.django__django-11728.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-11728 container_id=b1071b1072c8a77b7d4a2f58c1c13e41de0b513d0140135c559877e041d51811
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-11728 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-11728
+[build_container] Reusing existing container: sweb.eval.django__django-16263.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-16263 container_id=331c4c489fdcfc35e582ea2740c042cc8b5c62d7a27f13aab98bf9c878c3a30f
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-16263 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-16263
+[build_container] Reusing existing container: sweb.eval.matplotlib__matplotlib-23299.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=matplotlib__matplotlib-23299 container_id=25a2e2287a08b179b3c22c5c05f8b34654e42d1b1fdada50c5ff71777cf35d60
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=matplotlib__matplotlib-23299 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=matplotlib__matplotlib-23299
+[build_container] Reusing existing container: sweb.eval.django__django-16454.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-16454 container_id=2eae63ad4801bae533307433fe2bdd71a15698db0bf0bca6aceadeb4b8c51ce5
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-16454 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-16454
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-17630.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=sympy__sympy-17630 container_id=d24b7a33fb635458786957283a826d2a8fb503773d12880a5326c120476dfcf8
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-17630 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-17630
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-18199.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=sympy__sympy-18199 container_id=936e9e5b191b5ea13dccedb3ed286cc601640ff7682ba0c85f98fecb7bd43ffd
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-18199 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-18199
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-21596.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-20438.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=sympy__sympy-20438 container_id=d6c0e2aa10091f08608c5145c480affc2a0b4e4684453a4fe2e6fd681370ac04
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-20438 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-20438
+[run_instance] container started instance=sympy__sympy-21596 container_id=71a9f74c7738e8e8ac4afddbbb8c91855dbbffbdaa763b34de6bb07d74eed3f4
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-21596 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-21596
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-20916.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=sympy__sympy-20916 container_id=6d6e6807cfa17f1cc56e400fd12f635baf9daa2db8f717cb1f10f1af3e64af75
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-20916 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-20916
+
+[run_evaluation] Reset Output: HEAD is now at 3cedd79e6c Merge pull request #7731 from cclauss/patch-1
+
+
+
+[run_evaluation] Reset Output: HEAD is now at a5917978be Merge pull request #14172 from astropy/pre-commit-ci-update-config
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 58e78209c8 Merge pull request #17623 from cbm755/dollars_stirling
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 33b47e4bd6 Merge pull request #20646 from Mohitbalwani26/refactor(test_ode)
+
+
+
+[run_evaluation] Reset Output: HEAD is now at ba80d1e493 Merge pull request #18224 from Upabjojr/fix_tensor_index_structure
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 82298df6a5 Merge pull request #20912 from techiepriyansh/patch-1
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 110997fe18 Merge pull request #21510 from migueltorrescosta/master
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 3eadeacc06 Merge pull request #23347 from anntzer/gtkcairo
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+
+[run_evaluation] Reset Output: HEAD is now at 927c903f3c Refs #31097 -- Added release notes for 2f565f84aca136d9cc4e4d061f3196ddf9358ab8.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 0545781764 Fixed #30736 -- Added Storage.get_alternative_name() to allow customization.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at e39e727ded Fixed #31912 -- Removed strict=True in Path.resolve() in project template and CommonPasswordValidator.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 2e0f04507b Added tests for loaddata with gzip/bzip2 compressed fixtures.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 21b1d23912 Added CVE-2019-12308 to the security release archive.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 6599608c4d Fixed #32098 -- Made FieldFile use FileField.attname.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 321ecb40f4 Fixed #34135 -- Added async-compatible interface to related managers.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 1250483ebf Fixed #34286 -- Fixed admindocs markups for case-sensitive template/view names.
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for astropy__astropy-14182: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/astropy__astropy-14182/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=astropy__astropy-14182; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=astropy__astropy-14182
+[run_instance] keeping container for instance=astropy__astropy-14182 (--keep_container flag set)
+Evaluation error for matplotlib__matplotlib-23299: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/matplotlib__matplotlib-23299/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=matplotlib__matplotlib-23299; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=matplotlib__matplotlib-23299
+[run_instance] keeping container for instance=matplotlib__matplotlib-23299 (--keep_container flag set)
+Evaluation error for sympy__sympy-17630: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/sympy__sympy-17630/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-17630; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-17630
+[run_instance] keeping container for instance=sympy__sympy-17630 (--keep_container flag set)
+Evaluation error for sympy__sympy-21596: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/sympy__sympy-21596/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-21596; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-21596
+[run_instance] keeping container for instance=sympy__sympy-21596 (--keep_container flag set)
+Evaluation error for sympy__sympy-18199: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/sympy__sympy-18199/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-18199; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-18199
+[run_instance] keeping container for instance=sympy__sympy-18199 (--keep_container flag set)
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for astropy__astropy-7606: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/astropy__astropy-7606/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=astropy__astropy-7606; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=astropy__astropy-7606
+[run_instance] keeping container for instance=astropy__astropy-7606 (--keep_container flag set)
+Evaluation error for sympy__sympy-20916: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/sympy__sympy-20916/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-20916; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-20916
+[run_instance] keeping container for instance=sympy__sympy-20916 (--keep_container flag set)
+Evaluation error for sympy__sympy-20438: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/sympy__sympy-20438/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-20438; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-20438
+[run_instance] keeping container for instance=sympy__sympy-20438 (--keep_container flag set)
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for django__django-11728: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/django__django-11728/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-11728; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-11728
+[run_instance] keeping container for instance=django__django-11728 (--keep_container flag set)
+Evaluation error for django__django-12273: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/django__django-12273/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-12273; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-12273
+[run_instance] keeping container for instance=django__django-12273 (--keep_container flag set)
+Evaluation error for django__django-13344: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/django__django-13344/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-13344; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-13344
+[run_instance] keeping container for instance=django__django-13344 (--keep_container flag set)
+Evaluation error for django__django-12308: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/django__django-12308/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-12308; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-12308
+[run_instance] keeping container for instance=django__django-12308 (--keep_container flag set)
+Evaluation error for django__django-13513: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/django__django-13513/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-13513; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-13513
+[run_instance] keeping container for instance=django__django-13513 (--keep_container flag set)
+Evaluation error for django__django-16454: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/django__django-16454/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-16454; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-16454
+[run_instance] keeping container for instance=django__django-16454 (--keep_container flag set)
+Evaluation error for django__django-11433: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/django__django-11433/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-11433; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-11433
+[run_instance] keeping container for instance=django__django-11433 (--keep_container flag set)
+Evaluation error for django__django-16263: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_2000/scratchpad/django__django-16263/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-16263; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-16263
+[run_instance] keeping container for instance=django__django-16263 (--keep_container flag set)
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 16
+Instances submitted: 16
+Instances completed: 0
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 16
+Unstopped containers: 0
+Unremoved images: 16
+Final score: 0.0
+Report written to scratchpad.potter_overfit_recheck_examples_2000.json
+<frozen runpy>:128: RuntimeWarning: 'tddbench.harness.run_evaluation' found in sys.modules after import of package 'tddbench.harness', but prior to execution of 'tddbench.harness.run_evaluation'; this may result in unpredictable behaviour
+[main] code patch loader instance=astropy__astropy-14182 extracted_code_patches=1
+[main] code patch loader instance=astropy__astropy-7606 extracted_code_patches=1
+[main] code patch loader instance=django__django-11728 extracted_code_patches=1
+[main] code patch loader instance=django__django-12273 extracted_code_patches=1
+[main] code patch loader instance=django__django-13513 extracted_code_patches=1
+[main] code patch loader instance=django__django-16263 extracted_code_patches=1
+[main] code patch loader instance=django__django-16454 extracted_code_patches=1
+[main] code patch loader instance=matplotlib__matplotlib-23299 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-18199 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-20438 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-20916 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-21596 extracted_code_patches=1
+[main] code patch loader instance=django__django-11433 extracted_code_patches=1
+[main] code patch loader instance=django__django-12308 extracted_code_patches=1
+[main] code patch loader instance=django__django-13344 extracted_code_patches=1
+[main] code patch loader instance=sympy__sympy-17630 extracted_code_patches=1
+[main] merged instance=astropy__astropy-14182 test_count=1 code_count=1
+[main] instance=astropy__astropy-14182 loaded test_patches=1 code_patches=1
+[main] merged instance=astropy__astropy-7606 test_count=1 code_count=1
+[main] instance=astropy__astropy-7606 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-11728 test_count=1 code_count=1
+[main] instance=django__django-11728 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-12273 test_count=1 code_count=1
+[main] instance=django__django-12273 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-13513 test_count=1 code_count=1
+[main] instance=django__django-13513 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-16263 test_count=1 code_count=1
+[main] instance=django__django-16263 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-16454 test_count=1 code_count=1
+[main] instance=django__django-16454 loaded test_patches=1 code_patches=1
+[main] merged instance=matplotlib__matplotlib-23299 test_count=1 code_count=1
+[main] instance=matplotlib__matplotlib-23299 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-18199 test_count=1 code_count=1
+[main] instance=sympy__sympy-18199 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-20438 test_count=1 code_count=1
+[main] instance=sympy__sympy-20438 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-20916 test_count=1 code_count=1
+[main] instance=sympy__sympy-20916 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-21596 test_count=1 code_count=1
+[main] instance=sympy__sympy-21596 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-11433 test_count=1 code_count=1
+[main] instance=django__django-11433 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-12308 test_count=1 code_count=1
+[main] instance=django__django-12308 loaded test_patches=1 code_patches=1
+[main] merged instance=django__django-13344 test_count=1 code_count=1
+[main] instance=django__django-13344 loaded test_patches=1 code_patches=1
+[main] merged instance=sympy__sympy-17630 test_count=1 code_count=1
+[main] instance=sympy__sympy-17630 loaded test_patches=1 code_patches=1
+Running 16 unevaluated instances...
+Base image sweb.base.x86_64:latest already exists, skipping build.
+Base images built successfully.
+No environment images need to be built.
+[run_instances] instance=astropy__astropy-14182 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=astropy__astropy-7606 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-11433 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-11728 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-12273 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-12308 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-13344 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-13513 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-16263 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=django__django-16454 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=matplotlib__matplotlib-23299 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-17630 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-18199 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-20438 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-20916 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+[run_instances] instance=sympy__sympy-21596 pred_keys=['code_patch_versions', 'code_patches', 'instance_id', 'model_name_or_path', 'patch_versions', 'test_patches'] pred_test_patches=1 pred_test_patch_list=0 pred_code_patches=1 spec_test_patch_type=str
+Found 16 existing instance images. Will reuse them.
+Running 16 instances...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:00<00:07,  1.90it/s]100%|██████████| 16/16 [00:00<00:00, 26.48it/s]
+[run_instance] starting base instance=astropy__astropy-14182
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-11433
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=astropy__astropy-7606
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-12273
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-11728
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-12308
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-13344
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-13513
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-16263
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-17630
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=django__django-16454
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-18199
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=matplotlib__matplotlib-23299
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-20916
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[build_container] Reusing existing container: sweb.eval.astropy__astropy-14182.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=astropy__astropy-14182 container_id=9b9366d068a37d84947d50b1c3823563112217e64d1ede2afb59d3608f64590d
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=astropy__astropy-14182 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=astropy__astropy-14182
+[run_instance] starting base instance=sympy__sympy-21596
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[run_instance] starting base instance=sympy__sympy-20438
+[run_instance] discovered test_patches=1 code_patches=1
+[run_instance] keep_container=True, run_id=potter_overfit_recheck
+[build_container] Reusing existing container: sweb.eval.django__django-11433.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-11433 container_id=2dda576d49df37869332a3d85d38d115f5b295d236934b6d433642ad379fe0cc
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-11433 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-11433
+[build_container] Reusing existing container: sweb.eval.django__django-12273.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-12273 container_id=a558959772aff599a9d5b7513128b59e7b942702f3e157e8c47d4cec53725ec0
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-12273 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-12273
+[build_container] Reusing existing container: sweb.eval.django__django-11728.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-11728 container_id=b1071b1072c8a77b7d4a2f58c1c13e41de0b513d0140135c559877e041d51811
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-11728 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-11728
+[build_container] Reusing existing container: sweb.eval.django__django-12308.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-12308 container_id=e224a072863fef03a12adfebf485b3b1266242744fafddf1995de8d8bc74b8e6
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-12308 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-12308
+[build_container] Reusing existing container: sweb.eval.astropy__astropy-7606.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=astropy__astropy-7606 container_id=5a0c0877ff9fe087b08d7ab319184518b5845f68ab8b926b5b201d32e92a7ae0
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=astropy__astropy-7606 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=astropy__astropy-7606
+[build_container] Reusing existing container: sweb.eval.django__django-13344.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-13344 container_id=785b77e5193f0cc22d120b17e523c22d4291d848a4798fcc139b346ebbdb8274
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-13344 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-13344
+[build_container] Reusing existing container: sweb.eval.django__django-13513.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-13513 container_id=6f475db05b10ecf9e393f43650dd28c9d0f5225f0e2c472574a3e7d9c16ce87e
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-13513 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-13513
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-17630.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=sympy__sympy-17630 container_id=d24b7a33fb635458786957283a826d2a8fb503773d12880a5326c120476dfcf8
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-17630 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-17630
+[build_container] Reusing existing container: sweb.eval.django__django-16263.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-16263 container_id=331c4c489fdcfc35e582ea2740c042cc8b5c62d7a27f13aab98bf9c878c3a30f
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-16263 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-16263
+[build_container] Reusing existing container: sweb.eval.django__django-16454.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=django__django-16454 container_id=2eae63ad4801bae533307433fe2bdd71a15698db0bf0bca6aceadeb4b8c51ce5
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=django__django-16454 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=django__django-16454
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-18199.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=sympy__sympy-18199 container_id=936e9e5b191b5ea13dccedb3ed286cc601640ff7682ba0c85f98fecb7bd43ffd
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-18199 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-18199
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-20916.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=sympy__sympy-20916 container_id=6d6e6807cfa17f1cc56e400fd12f635baf9daa2db8f717cb1f10f1af3e64af75
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-20916 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-20916
+[build_container] Reusing existing container: sweb.eval.matplotlib__matplotlib-23299.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=matplotlib__matplotlib-23299 container_id=25a2e2287a08b179b3c22c5c05f8b34654e42d1b1fdada50c5ff71777cf35d60
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=matplotlib__matplotlib-23299 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=matplotlib__matplotlib-23299
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-21596.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=sympy__sympy-21596 container_id=71a9f74c7738e8e8ac4afddbbb8c91855dbbffbdaa763b34de6bb07d74eed3f4
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-21596 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-21596
+[build_container] Reusing existing container: sweb.eval.sympy__sympy-20438.potter_overfit_recheck (status: running)
+[run_instance] container already running, reusing it
+[run_instance] container started instance=sympy__sympy-20438 container_id=d6c0e2aa10091f08608c5145c480affc2a0b4e4684453a4fe2e6fd681370ac04
+[run_instance] Using pre-installed hypothesis and pytest from environment image
+[run_instance] evaluation loop counts instance=sympy__sympy-20438 test_patch_count=1 code_patch_count=1
+==============================
+[run_instance] # DISCOVERY MODE: 
+==============================
+[run_instance] preparing test patch version=1 for instance=sympy__sympy-20438
+
+[run_evaluation] Reset Output: HEAD is now at 3cedd79e6c Merge pull request #7731 from cclauss/patch-1
+
+
+
+[run_evaluation] Reset Output: HEAD is now at a5917978be Merge pull request #14172 from astropy/pre-commit-ci-update-config
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 58e78209c8 Merge pull request #17623 from cbm755/dollars_stirling
+
+
+
+[run_evaluation] Reset Output: HEAD is now at ba80d1e493 Merge pull request #18224 from Upabjojr/fix_tensor_index_structure
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 110997fe18 Merge pull request #21510 from migueltorrescosta/master
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 33b47e4bd6 Merge pull request #20646 from Mohitbalwani26/refactor(test_ode)
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 82298df6a5 Merge pull request #20912 from techiepriyansh/patch-1
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 3eadeacc06 Merge pull request #23347 from anntzer/gtkcairo
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+
+[run_evaluation] Reset Output: HEAD is now at 21b1d23912 Added CVE-2019-12308 to the security release archive.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 0545781764 Fixed #30736 -- Added Storage.get_alternative_name() to allow customization.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 927c903f3c Refs #31097 -- Added release notes for 2f565f84aca136d9cc4e4d061f3196ddf9358ab8.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 2e0f04507b Added tests for loaddata with gzip/bzip2 compressed fixtures.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 6599608c4d Fixed #32098 -- Made FieldFile use FileField.attname.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at e39e727ded Fixed #31912 -- Removed strict=True in Path.resolve() in project template and CommonPasswordValidator.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 321ecb40f4 Fixed #34135 -- Added async-compatible interface to related managers.
+
+
+
+[run_evaluation] Reset Output: HEAD is now at 1250483ebf Fixed #34286 -- Fixed admindocs markups for case-sensitive template/view names.
+
+
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+[run_instance] applying test patch for contributing test discovery version=1
+Evaluation error for sympy__sympy-17630: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/sympy__sympy-17630/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-17630; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-17630
+[run_instance] keeping container for instance=sympy__sympy-17630 (--keep_container flag set)
+Evaluation error for sympy__sympy-20916: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/sympy__sympy-20916/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-20916; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-20916
+[run_instance] keeping container for instance=sympy__sympy-20916 (--keep_container flag set)
+Evaluation error for sympy__sympy-18199: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/sympy__sympy-18199/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-18199; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-18199
+[run_instance] keeping container for instance=sympy__sympy-18199 (--keep_container flag set)
+Evaluation error for matplotlib__matplotlib-23299: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/matplotlib__matplotlib-23299/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=matplotlib__matplotlib-23299; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=matplotlib__matplotlib-23299
+[run_instance] keeping container for instance=matplotlib__matplotlib-23299 (--keep_container flag set)
+Evaluation error for sympy__sympy-21596: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/sympy__sympy-21596/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-21596; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-21596
+[run_instance] keeping container for instance=sympy__sympy-21596 (--keep_container flag set)
+Evaluation error for sympy__sympy-20438: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/sympy__sympy-20438/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=sympy__sympy-20438; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=sympy__sympy-20438
+[run_instance] keeping container for instance=sympy__sympy-20438 (--keep_container flag set)
+Evaluation error for astropy__astropy-14182: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/astropy__astropy-14182/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=astropy__astropy-14182; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=astropy__astropy-14182
+[run_instance] keeping container for instance=astropy__astropy-14182 (--keep_container flag set)
+Evaluation error for astropy__astropy-7606: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/astropy__astropy-7606/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=astropy__astropy-7606; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=astropy__astropy-7606
+[run_instance] keeping container for instance=astropy__astropy-7606 (--keep_container flag set)
+Evaluation error for django__django-12273: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/django__django-12273/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-12273; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-12273
+[run_instance] keeping container for instance=django__django-12273 (--keep_container flag set)
+Evaluation error for django__django-13344: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/django__django-13344/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-13344; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-13344
+[run_instance] keeping container for instance=django__django-13344 (--keep_container flag set)
+Evaluation error for django__django-12308: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/django__django-12308/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-12308; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-12308
+[run_instance] keeping container for instance=django__django-12308 (--keep_container flag set)
+Evaluation error for django__django-11728: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/django__django-11728/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-11728; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-11728
+[run_instance] keeping container for instance=django__django-11728 (--keep_container flag set)
+Evaluation error for django__django-11433: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/django__django-11433/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-11433; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-11433
+[run_instance] keeping container for instance=django__django-11433 (--keep_container flag set)
+Evaluation error for django__django-16263: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/django__django-16263/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-16263; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-16263
+[run_instance] keeping container for instance=django__django-16263 (--keep_container flag set)
+Evaluation error for django__django-16454: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/django__django-16454/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-16454; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-16454
+[run_instance] keeping container for instance=django__django-16454 (--keep_container flag set)
+Evaluation error for django__django-13513: >>>>> Patch Apply Failed while applying test patch for contributing test discovery:
+The next patch would delete the file pbt/test.py,
+which does not exist!  Assuming -R.
+patching file pbt/test.py
+Hunk #1 FAILED at 1.
+1 out of 1 hunk FAILED -- saving rejects to file pbt/test.py.rej
+
+Check (logs/run_evaluation/potter_overfit_recheck/examples_20000/scratchpad/django__django-13513/run_instance.log) for more information.
+[run_instance] evaluation error encountered for instance=django__django-13513; continuing outer cleanup
+[run_instance] unhandled EvaluationError escaped loop processing for instance=django__django-13513
+[run_instance] keeping container for instance=django__django-13513 (--keep_container flag set)
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 16
+Instances submitted: 16
+Instances completed: 0
+Instances incomplete: 0
+Instances resolved: 0
+Instances unresolved: 0
+Instances with empty patches: 0
+Instances with errors: 16
+Unstopped containers: 0
+Unremoved images: 16
+Final score: 0.0
+Report written to scratchpad.potter_overfit_recheck_examples_20000.json
+
+=== max_examples=200 (16 patches rewritten) ===
+
+=== max_examples=2000 (16 patches rewritten) ===
+
+=== max_examples=20000 (16 patches rewritten) ===

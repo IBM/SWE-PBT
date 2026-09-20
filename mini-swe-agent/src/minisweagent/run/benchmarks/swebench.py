@@ -37,6 +37,7 @@ CONFIG_FILE_VANILLA = builtin_config_dir / "benchmarks" / "swebench_vanilla.yaml
 CONFIG_FILE_EOTTER  = builtin_config_dir / "benchmarks" / "swebench_eotter.yaml"
 CONFIG_FILE_POTTER  = builtin_config_dir / "benchmarks" / "swebench_potter.yaml"
 CONFIG_FILE_MERGED  = builtin_config_dir / "benchmarks" / "swebench_merged.yaml"
+CONFIG_FILE_MERGED_STATIC = builtin_config_dir / "benchmarks" / "swebench_vanilla_tests.yaml"
 
 DATASET_MAPPING = {
     "full": "princeton-nlp/SWE-Bench",
@@ -250,6 +251,16 @@ def process_instance(
                 progress_manager.update_instance_status(instance_id, "Setting up merged tests")
                 _setup_merged_in_container(env, instance_id, eotter_patch, pbt_patch, _CONFTEST_SRC)
                 extra_run_kwargs["eotter_test"] = eotter_patch
+        elif mode == "merged_static":
+            # Static mode: tests are only exposed to the prompt, nothing is installed in the container.
+            eotter_patch = eotter_tests.get(instance_id) if eotter_tests else None
+            pbt_patch = potter_tests.get(instance_id) if potter_tests else None
+            if eotter_patch and pbt_patch:
+                extra_run_kwargs["eotter_test"] = eotter_patch
+                extra_run_kwargs["potter_test"] = pbt_patch
+            else:
+                missing = "eotter" if not eotter_patch else "potter"
+                logger.warning(f"[{instance_id}] No {missing} test found for merged_static mode")
         agent = ProgressTrackingAgent(
             model,
             env,
@@ -321,26 +332,34 @@ def main(
     eotter: bool = typer.Option(False, "--eotter", help="E-Otter mode: inject eotter test into prompt (uses swebench_eotter.yaml)", rich_help_panel="Mode"),
     potter: bool = typer.Option(False, "--potter", help="Potter mode: install PBT in container (uses swebench_potter.yaml)", rich_help_panel="Mode"),
     merged: bool = typer.Option(False, "--merged", help="Merged mode: inject eotter test into prompt AND install PBT in container (uses swebench_merged.yaml)", rich_help_panel="Mode"),
+    merged_static: bool = typer.Option(False, "--merged-static", help="Merged-static mode: inject eotter and PBT tests into prompt only, nothing installed in container (uses swebench_vanilla_tests.yaml)", rich_help_panel="Mode"),
     tests_file: Path | None = typer.Option(None, "--tests", help="Path to tests JSON file (list of {instance_id, model_patch} objects); required for --eotter and --potter", rich_help_panel="Mode"),
-    eotter_tests_file: Path | None = typer.Option(None, "--eotter-tests", help="Path to eotter tests JSON file (list of {instance_id, model_patch} objects); required for --merged", rich_help_panel="Mode"),
-    potter_tests_file: Path | None = typer.Option(None, "--potter-tests", help="Path to potter/PBT tests JSON file (list of {instance_id, model_patch} objects); required for --merged", rich_help_panel="Mode"),
+    eotter_tests_file: Path | None = typer.Option(None, "--eotter-tests", help="Path to eotter tests JSON file (list of {instance_id, model_patch} objects); required for --merged and --merged-static", rich_help_panel="Mode"),
+    potter_tests_file: Path | None = typer.Option(None, "--potter-tests", help="Path to potter/PBT tests JSON file (list of {instance_id, model_patch} objects); required for --merged and --merged-static", rich_help_panel="Mode"),
 ) -> None:
     # fmt: on
     # Validate mode flags
-    mode_flags = [vanilla, eotter, potter, merged]
+    mode_flags = [vanilla, eotter, potter, merged, merged_static]
     if sum(mode_flags) != 1:
-        raise typer.BadParameter("Exactly one of --vanilla, --eotter, --potter, or --merged must be specified.")
+        raise typer.BadParameter("Exactly one of --vanilla, --eotter, --potter, --merged, or --merged-static must be specified.")
     if (eotter or potter) and tests_file is None:
         raise typer.BadParameter("--tests is required when using --eotter or --potter.")
-    if merged and (eotter_tests_file is None or potter_tests_file is None):
-        raise typer.BadParameter("--eotter-tests and --potter-tests are both required when using --merged.")
+    if (merged or merged_static) and (eotter_tests_file is None or potter_tests_file is None):
+        raise typer.BadParameter("--eotter-tests and --potter-tests are both required when using --merged or --merged-static.")
 
-    mode = "vanilla" if vanilla else ("eotter" if eotter else ("potter" if potter else "merged"))
+    mode = (
+        "vanilla" if vanilla else
+        "eotter" if eotter else
+        "potter" if potter else
+        "merged" if merged else
+        "merged_static"
+    )
     config_file = {
         "vanilla": CONFIG_FILE_VANILLA,
         "eotter":  CONFIG_FILE_EOTTER,
         "potter":  CONFIG_FILE_POTTER,
         "merged":  CONFIG_FILE_MERGED,
+        "merged_static": CONFIG_FILE_MERGED_STATIC,
     }[mode]
 
     output_path = Path(output)
@@ -378,7 +397,7 @@ def main(
     elif mode == "potter" and tests_file is not None:
         potter_tests = _load_tests(tests_file)
         logger.info(f"Loaded potter tests for {len(potter_tests)} instances from '{tests_file}'")
-    elif mode == "merged":
+    elif mode in ("merged", "merged_static"):
         eotter_tests = _load_tests(eotter_tests_file)  # type: ignore[arg-type]
         logger.info(f"Loaded eotter tests for {len(eotter_tests)} instances from '{eotter_tests_file}'")
         potter_tests = _load_tests(potter_tests_file)  # type: ignore[arg-type]

@@ -1,12 +1,12 @@
 #!/bin/bash
-# Usage: ./run.sh --mode <vanilla|eotter|potter|merged> --subset <verified|rebench|/path/to/dataset.json> --instances <path_to_instance_ids.json> [--tests <path_to_tests.json>] [--eotter-tests <path> --potter-tests <path>]
+# Usage: ./run.sh --mode <vanilla|eotter|potter|merged|merged-static> --subset <verified|rebench|/path/to/dataset.json> --instances <path_to_instance_ids.json> [--tests <path_to_tests.json>] [--eotter-tests <path> --potter-tests <path>]
 #
 # --instances     JSON file containing a list of instance_id strings
-# --mode          One of: vanilla, eotter, potter, merged
+# --mode          One of: vanilla, eotter, potter, merged, merged-static
 # --subset        Dataset subset: verified, rebench, or a path to a local .json dataset file
 # --tests         Path to tests JSON file ({instance_id, model_patch} list); required for eotter/potter
-# --eotter-tests  Path to eotter tests JSON file; required for merged
-# --potter-tests  Path to potter tests JSON file; required for merged
+# --eotter-tests  Path to eotter tests JSON file; required for merged and merged-static
+# --potter-tests  Path to potter tests JSON file; required for merged and merged-static
 #
 # Splits instance_ids across 4 parallel tmux windows.
 
@@ -34,12 +34,12 @@ done
 
 # ---------- validation ----------
 if [[ -z "$mode" || -z "$subset" || -z "$instances_path" ]]; then
-    echo "Usage: $0 --mode <vanilla|eotter|potter|merged> --subset <verified|rebench|/path/to/dataset.json> --instances <path> [--tests <path>] [--eotter-tests <path> --potter-tests <path>]"
+    echo "Usage: $0 --mode <vanilla|eotter|potter|merged|merged-static> --subset <verified|rebench|/path/to/dataset.json> --instances <path> [--tests <path>] [--eotter-tests <path> --potter-tests <path>]"
     exit 1
 fi
 
-if [[ "$mode" != "vanilla" && "$mode" != "eotter" && "$mode" != "potter" && "$mode" != "merged" ]]; then
-    echo "Error: --mode must be one of: vanilla, eotter, potter, merged"
+if [[ "$mode" != "vanilla" && "$mode" != "eotter" && "$mode" != "potter" && "$mode" != "merged" && "$mode" != "merged-static" ]]; then
+    echo "Error: --mode must be one of: vanilla, eotter, potter, merged, merged-static"
     exit 1
 fi
 
@@ -53,8 +53,8 @@ if [[ ("$mode" == "eotter" || "$mode" == "potter") && -z "$tests_path" ]]; then
     exit 1
 fi
 
-if [[ "$mode" == "merged" && ( -z "$eotter_tests_path" || -z "$potter_tests_path" ) ]]; then
-    echo "Error: --eotter-tests and --potter-tests are both required when --mode is 'merged'"
+if [[ ( "$mode" == "merged" || "$mode" == "merged-static" ) && ( -z "$eotter_tests_path" || -z "$potter_tests_path" ) ]]; then
+    echo "Error: --eotter-tests and --potter-tests are both required when --mode is '$mode'"
     exit 1
 fi
 
