@@ -189,6 +189,34 @@ The script distributes work across 4 parallel tmux windows. Attach with `tmux at
 
 ---
 
+### Step 4c — Run the SWE agent with a statically merged mode
+
+Use mini-swe-agent in `merged-static` mode to attempt patches guided by both the eotter reproduction test and the potter PBTs at once.
+
+```bash
+cd mini-swe-agent
+bash run.sh \
+    --mode merged-static \
+    --subset verified \
+    --instances <path_to_instance_ids.json> \
+    --eotter-tests <path_to_eotter_tests.json> \
+    --potter-tests <path_to_potter_tests.json>
+```
+
+**Example:**
+```bash
+bash run.sh \
+    --mode merged-static \
+    --subset verified \
+    --instances ../test-generation/id_list.json \
+    --eotter-tests eotter_tests.json \
+    --potter-tests potter_tests.json
+```
+
+The script distributes work across 4 parallel tmux windows. Attach with `tmux attach -t run_merged-static_<pid>`.
+
+---
+
 ### Step 5 — Evaluate with SWE-bench
 
 Evaluate the patches produced by mini-swe-agent against the SWE-bench benchmark using the official Docker-based harness.
